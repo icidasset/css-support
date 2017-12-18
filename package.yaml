@@ -1,0 +1,32 @@
+name: css-support
+version: 1.0.0
+
+
+default-extensions:
+  DataKinds
+  DeriveGeneric
+  DisambiguateRecordFields
+  DuplicateRecordFields
+  NoImplicitPrelude
+  OverloadedStrings
+  StandaloneDeriving
+
+
+dependencies:
+  - aeson == 1.2.*
+  - base >= 4.7 && < 5
+  - cases == 0.1.*
+  - flow == 1.*
+  - protolude == 0.2.*
+  - req == 1.0.*
+  - text == 1.*
+  - unordered-containers == 0.2.*
+
+
+
+executables:
+  # 🚜
+  generator:
+    main: Main.hs
+    source-dirs:
+      - gen
