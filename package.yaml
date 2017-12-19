@@ -7,8 +7,11 @@ default-extensions:
   DeriveGeneric
   DisambiguateRecordFields
   DuplicateRecordFields
+  NamedFieldPuns
   NoImplicitPrelude
   OverloadedStrings
+  RecordWildCards
+  QuasiQuotes
   StandaloneDeriving
 
 
@@ -17,6 +20,7 @@ dependencies:
   - base >= 4.7 && < 5
   - cases == 0.1.*
   - flow == 1.*
+  - neat-interpolation == 0.3.*
   - protolude == 0.2.*
   - req == 1.0.*
   - text == 1.*

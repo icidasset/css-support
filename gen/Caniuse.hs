@@ -1,5 +1,8 @@
 module Caniuse
-    ( fetchData
+    ( Agent(..)
+    , DataSet(..)
+    , Entry(..)
+    , fetchData
     ) where
 
 import Data.Aeson as Aeson
@@ -11,6 +14,7 @@ import Protolude
 import qualified Data.Char as Char (toUpper)
 import qualified Data.HashMap.Strict as HashMap
 import qualified Data.List as List
+import qualified Data.Text as Text (splitOn)
 
 
 -- 🍯
@@ -21,17 +25,20 @@ fetchData = do
     -- Make request
     json <- req GET dataUrl NoReqBody jsonResponse mempty
 
-    -- Transform response into a `TemporaryDataSet`
+    -- Transform response
     let temporarySet    = responseBody json :: TemporaryDataSet
-
-    -- Filter, transform and parse more things
     let cats            = css (_cats temporarySet)
-    let filtered        = HashMap.filter (filterTemporaryEntries cats) (_entries temporarySet)
-    let transformed     = HashMap.map entryTransformer filtered
-    let parsedAgents    = retrieveAgents temporarySet
 
-    -- TemporaryDataSet -> DataSet
-    return DataSet { agents = parsedAgents, entries = transformed }
+    -- Create final DataSet
+    return DataSet
+        { agents =
+            retrieveAgents temporarySet
+        , entries =
+            temporarySet
+                |> _entries
+                |> HashMap.filter (filterTemporaryEntries cats)
+                |> HashMap.map entryTransformer
+        }
 
 
 
@@ -57,6 +64,7 @@ data TemporaryDataSet =
 data TemporaryEntry =
     TemporaryEntry
         { categories :: [Text]
+        , keywords :: Aeson.Value
         , notes :: Text
         , notesByNum :: Aeson.Value
         , stats :: Aeson.Value
@@ -109,7 +117,8 @@ data DataSet =
 
 data Entry =
     Entry
-        { notes :: Text
+        { keywords :: [Text]
+        , notes :: Text
         , notesByNum :: HashMap Text Text
         , stats :: HashMap Text (HashMap Text Text)
         }
@@ -173,7 +182,15 @@ filterTemporaryEntries cats entry =
 entryTransformer :: TemporaryEntry -> Entry
 entryTransformer entry =
     Entry
-        { notes = ""
+        { keywords =
+            keywords (entry :: TemporaryEntry)
+                |> decodeJsonValue
+                |> map (Text.splitOn ",")
+                |> fromMaybe []
+
+        --
+        , notes =
+            notes (entry :: TemporaryEntry)
 
         --
         , notesByNum =
@@ -186,20 +203,33 @@ entryTransformer entry =
             stats (entry :: TemporaryEntry)
                 |> decodeJsonValue
                 |> fromMaybe HashMap.empty
+                |> HashMap.map HashMap.toList
+                |> HashMap.map (List.sortOn fst)
+                |> HashMap.map reduceStatistics
+                |> HashMap.map (HashMap.fromList)
         }
 
 
 
+-- Reducers
+
+
+reduceStatistics :: [(Text, Text)] -> [(Text, Text)]
+reduceStatistics =
+    List.foldl
+        (\acc stat ->
+            if List.null acc then
+                [ stat ]
+            else if snd (List.head acc) /= snd stat then
+                acc ++ [ stat ]
+            else
+                acc
+        )
+        []
+
+
+
 -- Other functions
-
-
-retrieveAgents :: TemporaryDataSet -> HashMap Text Agent
-retrieveAgents set =
-    set
-        |> _agents
-        |> decodeJsonValue
-        |> fromMaybe HashMap.empty
-
 
 
 decodeJsonValue :: FromJSON a => Aeson.Value -> Maybe a
@@ -210,3 +240,11 @@ decodeJsonValue value =
 
         Error err ->
             Nothing
+
+
+retrieveAgents :: TemporaryDataSet -> HashMap Text Agent
+retrieveAgents set =
+    set
+        |> _agents
+        |> decodeJsonValue
+        |> fromMaybe HashMap.empty

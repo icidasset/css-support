@@ -10,6 +10,7 @@ import Protolude
 
 
 import qualified Caniuse
+import qualified Elm
 
 
 
@@ -17,9 +18,5 @@ import qualified Caniuse
 
 
 main :: IO ()
-main = do
-    set <- Caniuse.fetchData
-
-    print set
-
-    return ()
+main =
+    Caniuse.fetchData >>= Elm.createModules
