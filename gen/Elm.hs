@@ -9,6 +9,7 @@ import Protolude
 import qualified Cases
 import qualified Data.HashMap.Strict as HashMap
 import qualified Data.List as List
+import qualified Data.Maybe as Maybe
 import qualified Data.Text as Text
 
 
@@ -22,19 +23,19 @@ import Caniuse (Agent(..), DataSet(..), Entry(..), singlePointVersion, statistic
 -- 🍯
 
 
-createModules :: DataSet -> IO ()
-createModules set = do
+createModules :: DataSet -> [Text] -> IO ()
+createModules set cssProperties = do
     writeFile
-        "src/CssSupport/Rules.elm"
-        (elmModule "CssSupport.Rules" set)
+        "src/Css/Support/Data.elm"
+        (elmModule "Css.Support.Data" set cssProperties)
 
 
 
 -- DataSet -> Elm module
 
 
-elmModule :: Text -> DataSet -> Text
-elmModule name set =
+elmModule :: Text -> DataSet -> [Text] -> Text
+elmModule name set cssPropsList =
     let
         agentsMap :: HashMap Text Agent
         agentsMap =
@@ -51,34 +52,83 @@ elmModule name set =
                 |> prepUnionValues
                 |> Text.intercalate "\n"
 
-        functions :: Text
-        functions =
+        cssProps :: Text
+        cssProps =
+            cssPropsList
+                |> map (\s -> Text.concat [ "\"", s, "\"" ])
+                |> Text.intercalate ", "
+
+        entriesList :: [(Text, Entry)]
+        entriesList =
             (entries set)
                 |> HashMap.toList
                 |> List.sortOn fst
+
+        features :: Text
+        features =
+            entriesList
                 |> map (elmEntry agentsMap)
                 |> Text.intercalate "\n\n\n"
 
-        functionNames :: Text
-        functionNames =
-            (entries set)
-                |> HashMap.toList
+        featureFunctionNames :: Text
+        featureFunctionNames =
+            entriesList
                 |> map fst
                 |> map Cases.camelize
-                |> List.sort
                 |> Text.intercalate ", "
 
+        overlap :: Text
+        overlap =
+            cssPropsList
+                |> map
+                    (\prop ->
+                        entriesList
+                            |> List.find (snd .> keywords .> List.elem prop)
+                            |> map (fst .> Cases.camelize .> (,) prop)
+                    )
+                |> filter Maybe.isJust
+                |> map Maybe.fromJust
+                |> map
+                    (\(cssProp, featureFunctionName) ->
+                        [text|
+                        "$cssProp" ->
+                            $featureFunctionName
+                        |]
+                    )
+                |> Text.intercalate "\n"
     in
     [text|
         module ${name} exposing (..)
 
-        {-| Every CSS related item from the Can-I-use database.
+        {-| All the [caniuse.com](https://caniuse.com/) data related to CSS reduced to a more concise data format (more info in the next paragraph), a list of all the standardized CSS properties from [MDN](https://developer.mozilla.org/en-US/) and the overlap between these two data sets.
+
+        ## What exactly is in the `BrowserSupport` lists?
+
+        __Scenario 1:__ The browser has support for the feature, it will list the first version that has partial support for the feature and also the version that has full support.
+
+        __Scenario 2:__ The browser has no support for the feature, it will list the first version available from the caniuse data. If there are versions with other notes, it will list those as well.
+
+        That's pretty much the gist of it.
+
 
         # Types
+
         @docs Browser, BrowserSupport, Supported, Target, Version
 
-        # Functions
-        @docs $functionNames
+
+        #  CSS Properties
+
+        @docs standardCssProperties
+
+
+        # Overlap
+
+        @docs overlap
+
+
+        # Features
+
+        @docs $featureFunctionNames
 
         -}
 
@@ -124,10 +174,36 @@ elmModule name set =
 
 
 
-        -- Functions
+        -- CSS Properties
 
 
-        $functions
+        {-| A list of all the standardized CSS properties.
+        -}
+        standardCssProperties : List String
+        standardCssProperties =
+            [ $cssProps ]
+
+
+
+        -- Overlap
+
+
+        {-| The overlap between the list of CSS properties (ie. `standardCssProperties`) and the features listed below. So in other words, you give this function a css property (that is part of the standard CSS spec) and then you'll get the browser support for it.
+        -}
+        overlap : String -> List BrowserSupport
+        overlap cssProperty =
+            case cssProperty of
+                $overlap
+
+                _ ->
+                    []
+
+
+
+        -- Features
+
+
+        $features
     |]
 
 

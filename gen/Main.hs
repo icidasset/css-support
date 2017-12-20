@@ -11,6 +11,7 @@ import Protolude
 
 import qualified Caniuse
 import qualified Elm
+import qualified Mdn
 
 
 
@@ -18,5 +19,8 @@ import qualified Elm
 
 
 main :: IO ()
-main =
-    Caniuse.fetchData >>= Elm.createModules
+main = do
+    caniuseData         <- Caniuse.fetchData
+    cssProperties       <- Mdn.fetchData
+
+    Elm.createModules caniuseData cssProperties

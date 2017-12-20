@@ -7,8 +7,8 @@
         "src"
     ],
     "exposed-modules": [
-      "CssSupport.Rules",
-      "CssSupport"
+      "Css.Support.Data",
+      "Css.Support"
     ],
     "dependencies": {
         "elm-lang/core": "5.0.0 <= v < 6.0.0"

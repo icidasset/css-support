@@ -1,4 +1,4 @@
-module CssSupport exposing (..)
+module Css.Support exposing (..)
 
 {-| Main.
 
