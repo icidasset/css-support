@@ -1,5 +1,6 @@
 module Mdn
-    ( fetchData
+    ( dataUrl
+    , fetchData
     ) where
 
 import Data.Aeson (FromJSON)

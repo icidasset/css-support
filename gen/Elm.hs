@@ -293,10 +293,10 @@ statNote entry stat =
             noteNumber =
                 Text.drop idx stat
         in
-            entry
-                |> notesByNum
-                |> HashMap.lookup noteNumber
-                |> fromMaybe ""
+        entry
+            |> notesByNum
+            |> HashMap.lookup noteNumber
+            |> fromMaybe ""
 
     else
         notes entry

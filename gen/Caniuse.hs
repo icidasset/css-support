@@ -182,12 +182,9 @@ singlePointVersion ver =
                 |> (: [])
                 |> List.filter ((/=) "")
     in
-        if List.null secondPart == False then
-            secondPart
-                |> (++) firstPart
-                |> Text.intercalate "."
-        else
-            List.head firstPart
+    secondPart
+        |> (++) firstPart
+        |> Text.intercalate "."
 
 
 statisticSortFn :: (Text, Text) -> Float
@@ -200,15 +197,15 @@ statisticSortFn tuple =
                 |> singlePointVersion
                 |> Text.unpack
     in
-        case reads v :: [(Float, [Char])] of
-            [(x, _)] ->
-                x
+    case reads v :: [(Float, [Char])] of
+        [(x, _)] ->
+            x
 
-            [] ->
-                v
-                    |> map Char.ord
-                    |> sum
-                    |> realToFrac
+        [] ->
+            v
+                |> map Char.ord
+                |> sum
+                |> realToFrac
 
 
 
@@ -236,7 +233,8 @@ This removes:
 -}
 filterOutUnnecessaryStatistics :: [(Text, Text)] -> [(Text, Text)]
 filterOutUnnecessaryStatistics stats =
-    if List.length stats > 1 && Text.isPrefixOf "n" (snd (List.head stats)) then
+    if List.length stats > 1 &&
+       Text.isPrefixOf "n" ((List.head .> snd) stats) then
         List.drop 1 stats
     else
         stats
