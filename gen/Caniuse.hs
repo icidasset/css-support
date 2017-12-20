@@ -2,19 +2,23 @@ module Caniuse
     ( Agent(..)
     , DataSet(..)
     , Entry(..)
+    , dataUrl
     , fetchData
+    , singlePointVersion
+    , statisticSortFn
     ) where
 
 import Data.Aeson as Aeson
 import Data.HashMap.Strict as HashMap (HashMap)
 import Flow
 import Network.HTTP.Req as Req
+import Prelude (read)
 import Protolude
 
-import qualified Data.Char as Char (toUpper)
+import qualified Data.Char as Char (ord, toUpper)
 import qualified Data.HashMap.Strict as HashMap
 import qualified Data.List as List
-import qualified Data.Text as Text (splitOn)
+import qualified Data.Text as Text
 
 
 -- 🍯
@@ -105,7 +109,7 @@ dataSetFieldModifier chars =
 
 
 
--- ⚗️  /  Out  /  Data that will be used outside this module
+-- ⚗️  /  Out  /  Data that will be used outside this module {public}
 
 
 data DataSet =
@@ -151,12 +155,60 @@ agentFieldModifier chars =
 
 
 
--- 🥡
+-- 🥡  /  Take-out {public}
 
 
 dataUrl :: Url Https
 dataUrl =
     https "raw.githubusercontent.com" /: "Fyrd/caniuse/master/fulldata-json/data-2.0.json"
+
+
+singlePointVersion :: Text -> Text
+singlePointVersion ver =
+    let
+        split :: [Text]
+        split =
+            Text.splitOn "." ver
+
+        firstPart :: [Text]
+        firstPart =
+            List.take 1 split
+
+        secondPart :: [Text]
+        secondPart =
+            split
+                |> List.drop 1
+                |> Text.concat
+                |> (: [])
+                |> List.filter ((/=) "")
+    in
+        if List.null secondPart == False then
+            secondPart
+                |> (++) firstPart
+                |> Text.intercalate "."
+        else
+            List.head firstPart
+
+
+statisticSortFn :: (Text, Text) -> Float
+statisticSortFn tuple =
+    let
+        v =
+            tuple
+                |> fst
+                |> versionWithoutRange
+                |> singlePointVersion
+                |> Text.unpack
+    in
+        case reads v :: [(Float, [Char])] of
+            [(x, _)] ->
+                x
+
+            [] ->
+                v
+                    |> map Char.ord
+                    |> sum
+                    |> realToFrac
 
 
 
@@ -171,6 +223,23 @@ filterTemporaryEntries cats entry =
         |> List.intersect cats
         |> List.null
         |> not
+
+
+{-| We don't need all the statistics.
+
+NOTE: Most of the statistics are already removed
+      by the `reduceStatistics` function.
+
+This removes:
+- `NotSupported` items where the browser later does support it
+
+-}
+filterOutUnnecessaryStatistics :: [(Text, Text)] -> [(Text, Text)]
+filterOutUnnecessaryStatistics stats =
+    if List.length stats > 1 && Text.isPrefixOf "n" (snd (List.head stats)) then
+        List.drop 1 stats
+    else
+        stats
 
 
 
@@ -204,8 +273,9 @@ entryTransformer entry =
                 |> decodeJsonValue
                 |> fromMaybe HashMap.empty
                 |> HashMap.map HashMap.toList
-                |> HashMap.map (List.sortOn fst)
+                |> HashMap.map (List.sortOn statisticSortFn)
                 |> HashMap.map reduceStatistics
+                |> HashMap.map filterOutUnnecessaryStatistics
                 |> HashMap.map (HashMap.fromList)
         }
 
@@ -220,7 +290,7 @@ reduceStatistics =
         (\acc stat ->
             if List.null acc then
                 [ stat ]
-            else if snd (List.head acc) /= snd stat then
+            else if snd (List.last acc) /= snd stat then
                 acc ++ [ stat ]
             else
                 acc
@@ -248,3 +318,13 @@ retrieveAgents set =
         |> _agents
         |> decodeJsonValue
         |> fromMaybe HashMap.empty
+
+
+versionWithoutRange :: Text -> Text
+versionWithoutRange text =
+    if Text.isInfixOf "-" text then
+        text
+            |> Text.splitOn "-"
+            |> List.head
+    else
+        text
