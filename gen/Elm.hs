@@ -113,7 +113,7 @@ elmModule name set cssPropsList =
 
         # Types
 
-        @docs Browser, BrowserSupport, Supported, Target, Version
+        @docs Browser, BrowserSupport, Supported, Version
 
 
         #  CSS Properties
@@ -157,11 +157,6 @@ elmModule name set cssPropsList =
             | PartiallySupported
             | PartiallySupportedWithPrefix
             | NotSupported
-
-
-        {-|-}
-        type alias Target =
-            ( Browser, Version )
 
 
         {-|-}

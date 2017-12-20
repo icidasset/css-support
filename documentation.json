@@ -1,19 +1,44 @@
 [
   {
+    "name": "Css.Support",
+    "comment": " Functions that help you check the browser support for CSS properties.\n\n\n# Compatibility\n\n@docs compatible\n\n\n# Targets\n\n@docs Target, forTarget\n\n\n# Compatibility + Targets\n\n@docs caniuse\n\n",
+    "aliases": [
+      {
+        "name": "Target",
+        "comment": " A `Target` is the combination of a `Browser` and a `Version`.\n",
+        "args": [],
+        "type": "( Css.Support.Data.Browser, Css.Support.Data.Version )"
+      }
+    ],
+    "types": [],
+    "values": [
+      {
+        "name": "caniuse",
+        "comment": " An alternative version of `forTarget` that takes:\n\n  - A list of CSS properties instead of a single one\n  - A list of `Target`s instead of a single one\n  - Returns a `Dict` with `BrowserSupport`s\n\nSo in other words, this function will generate a compatibility table.\n\n",
+        "type": "List String -> List Css.Support.Target -> Dict.Dict String (List Css.Support.Data.BrowserSupport)"
+      },
+      {
+        "name": "compatible",
+        "comment": " Find out which browsers fully, or partially, support a given CSS property.\nReturns `Nothing` when it cannot find any associated data.\n",
+        "type": "String -> Bool -> Maybe.Maybe (List Css.Support.Data.BrowserSupport)"
+      },
+      {
+        "name": "forTarget",
+        "comment": " Find out of the given browser-version combination supports the given CSS property.\nReturns `NotSupported` when it cannot find any associated data.\n",
+        "type": "String -> Css.Support.Target -> Css.Support.Data.Supported"
+      }
+    ],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
     "name": "Css.Support.Data",
-    "comment": " All the [caniuse.com](https://caniuse.com/) data related to CSS reduced to a more concise data format (more info in the next paragraph), a list of all the standardized CSS properties from [MDN](https://developer.mozilla.org/en-US/) and the overlap between these two data sets.\n\n## What exactly is in the `BrowserSupport` lists?\n\n__Scenario 1:__ The browser has support for the feature, it will list the first version that has partial support for the feature and also the version that has full support.\n\n__Scenario 2:__ The browser has no support for the feature, it will list the first version available from the caniuse data. If there are versions with other notes, it will list those as well.\n\nThat's pretty much the gist of it.\n\n\n# Types\n\n@docs Browser, BrowserSupport, Supported, Target, Version\n\n\n#  CSS Properties\n\n@docs standardCssProperties\n\n\n# Overlap\n\n@docs overlap\n\n\n# Features\n\n@docs backgroundAttachment, backgroundImgOpts, backgroundPositionXY, backgroundRepeatRoundSpace, borderImage, borderRadius, calc, chUnit, cssAll, cssAnimation, cssAppearance, cssApplyRule, cssAtCounterStyle, cssBackdropFilter, cssBackgroundOffsets, cssBackgroundblendmode, cssBoxdecorationbreak, cssBoxshadow, cssCanvas, cssCaretColor, cssCaseInsensitive, cssClipPath, cssConicGradients, cssContainment, cssCounters, cssCrispEdges, cssCrossFade, cssDefaultPseudo, cssDescendantGtgt, cssDeviceadaptation, cssDirPseudo, cssDisplayContents, cssElementFunction, cssExclusions, cssFeaturequeries, cssFilterFunction, cssFilters, cssFirstLetter, cssFirstLine, cssFixed, cssFocusRing, cssFocusWithin, cssFontRenderingControls, cssFontStretch, cssGencontent, cssGradients, cssGrid, cssHangingPunctuation, cssHas, cssHyphens, cssImageOrientation, cssImageSet, cssInOutOfRange, cssIndeterminatePseudo, cssInitialLetter, cssInitialValue, cssLetterSpacing, cssLineClamp, cssLogicalProps, cssMarkerPseudo, cssMasks, cssMatchesPseudo, cssMediaInteraction, cssMediaResolution, cssMediaqueries, cssMixblendmode, cssMotionPaths, cssNamespaces, cssNotSelList, cssNthChildOf, cssOpacity, cssOptionalPseudo, cssOverflowAnchor, cssPageBreak, cssPlaceholder, cssPlaceholderShown, cssRebeccapurple, cssReflections, cssRegions, cssRepeatingGradients, cssResize, cssRevertValue, cssRrggbbaa, cssScrollBehavior, cssScrollbar, cssSel2, cssSel3, cssSelection, cssShapes, cssSnappoints, cssSticky, cssTable, cssTextAlignLast, cssTextIndent, cssTextJustify, cssTextOrientation, cssTextshadow, cssTouchAction, cssTransitions, cssUnsetValue, cssVariables, cssWidowsOrphans, cssWritingMode, cssZoom, css3Attr, css3Boxsizing, css3Colors, css3Cursors, css3CursorsNewer, css3Tabsize, currentcolor, devicepixelratio, flexbox, flowRoot, fontFeature, fontKerning, fontLoading, fontSizeAdjust, fontSmooth, fontUnicodeRange, fontVariantAlternates, fontface, getcomputedstyle, inlineBlock, intrinsicWidth, kerningPairsLigatures, minmaxwh, multibackgrounds, multicolumn, objectFit, outline, pointerEvents, rem, runIn, styleScoped, svgCss, textDecoration, textEmphasis, textOverflow, textSizeAdjust, textStroke, transforms2D, transforms3D, ttf, userSelectNone, variableFonts, viewportUnits, willChange, wordBreak, wordwrap\n\n",
+    "comment": " All the [caniuse.com](https://caniuse.com/) data related to CSS reduced to a more concise data format (more info in the next paragraph), a list of all the standardized CSS properties from [MDN](https://developer.mozilla.org/en-US/) and the overlap between these two data sets.\n\n## What exactly is in the `BrowserSupport` lists?\n\n__Scenario 1:__ The browser has support for the feature, it will list the first version that has partial support for the feature and also the version that has full support.\n\n__Scenario 2:__ The browser has no support for the feature, it will list the first version available from the caniuse data. If there are versions with other notes, it will list those as well.\n\nThat's pretty much the gist of it.\n\n\n# Types\n\n@docs Browser, BrowserSupport, Supported, Version\n\n\n#  CSS Properties\n\n@docs standardCssProperties\n\n\n# Overlap\n\n@docs overlap\n\n\n# Features\n\n@docs backgroundAttachment, backgroundImgOpts, backgroundPositionXY, backgroundRepeatRoundSpace, borderImage, borderRadius, calc, chUnit, cssAll, cssAnimation, cssAppearance, cssApplyRule, cssAtCounterStyle, cssBackdropFilter, cssBackgroundOffsets, cssBackgroundblendmode, cssBoxdecorationbreak, cssBoxshadow, cssCanvas, cssCaretColor, cssCaseInsensitive, cssClipPath, cssConicGradients, cssContainment, cssCounters, cssCrispEdges, cssCrossFade, cssDefaultPseudo, cssDescendantGtgt, cssDeviceadaptation, cssDirPseudo, cssDisplayContents, cssElementFunction, cssExclusions, cssFeaturequeries, cssFilterFunction, cssFilters, cssFirstLetter, cssFirstLine, cssFixed, cssFocusRing, cssFocusWithin, cssFontRenderingControls, cssFontStretch, cssGencontent, cssGradients, cssGrid, cssHangingPunctuation, cssHas, cssHyphens, cssImageOrientation, cssImageSet, cssInOutOfRange, cssIndeterminatePseudo, cssInitialLetter, cssInitialValue, cssLetterSpacing, cssLineClamp, cssLogicalProps, cssMarkerPseudo, cssMasks, cssMatchesPseudo, cssMediaInteraction, cssMediaResolution, cssMediaqueries, cssMixblendmode, cssMotionPaths, cssNamespaces, cssNotSelList, cssNthChildOf, cssOpacity, cssOptionalPseudo, cssOverflowAnchor, cssPageBreak, cssPlaceholder, cssPlaceholderShown, cssRebeccapurple, cssReflections, cssRegions, cssRepeatingGradients, cssResize, cssRevertValue, cssRrggbbaa, cssScrollBehavior, cssScrollbar, cssSel2, cssSel3, cssSelection, cssShapes, cssSnappoints, cssSticky, cssTable, cssTextAlignLast, cssTextIndent, cssTextJustify, cssTextOrientation, cssTextshadow, cssTouchAction, cssTransitions, cssUnsetValue, cssVariables, cssWidowsOrphans, cssWritingMode, cssZoom, css3Attr, css3Boxsizing, css3Colors, css3Cursors, css3CursorsNewer, css3Tabsize, currentcolor, devicepixelratio, flexbox, flowRoot, fontFeature, fontKerning, fontLoading, fontSizeAdjust, fontSmooth, fontUnicodeRange, fontVariantAlternates, fontface, getcomputedstyle, inlineBlock, intrinsicWidth, kerningPairsLigatures, minmaxwh, multibackgrounds, multicolumn, objectFit, outline, pointerEvents, rem, runIn, styleScoped, svgCss, textDecoration, textEmphasis, textOverflow, textSizeAdjust, textStroke, transforms2D, transforms3D, ttf, userSelectNone, variableFonts, viewportUnits, willChange, wordBreak, wordwrap\n\n",
     "aliases": [
       {
         "name": "BrowserSupport",
         "comment": "",
         "args": [],
         "type": "{ browser : Css.Support.Data.Browser , note : Maybe.Maybe String , support : Css.Support.Data.Supported , version : Css.Support.Data.Version }"
-      },
-      {
-        "name": "Target",
-        "comment": "",
-        "args": [],
-        "type": "( Css.Support.Data.Browser, Css.Support.Data.Version )"
       }
     ],
     "types": [
@@ -912,20 +937,6 @@
         "name": "wordwrap",
         "comment": " wordwrap\n",
         "type": "List Css.Support.Data.BrowserSupport"
-      }
-    ],
-    "generated-with-elm-version": "0.18.0"
-  },
-  {
-    "name": "Css.Support",
-    "comment": " Main.\n\n\n# A\n\n@docs a\n\n",
-    "aliases": [],
-    "types": [],
-    "values": [
-      {
-        "name": "a",
-        "comment": " ",
-        "type": "a -> a"
       }
     ],
     "generated-with-elm-version": "0.18.0"

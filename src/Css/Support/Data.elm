@@ -13,7 +13,7 @@ That's pretty much the gist of it.
 
 # Types
 
-@docs Browser, BrowserSupport, Supported, Target, Version
+@docs Browser, BrowserSupport, Supported, Version
 
 
 #  CSS Properties
@@ -74,11 +74,6 @@ type Supported
     | PartiallySupported
     | PartiallySupportedWithPrefix
     | NotSupported
-
-
-{-|-}
-type alias Target =
-    ( Browser, Version )
 
 
 {-|-}
