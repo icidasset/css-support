@@ -27,27 +27,33 @@ createModules :: DataSet -> [Text] -> IO ()
 createModules set cssProperties = do
     writeFile
         "src/Css/Support/Data.elm"
-        (elmModule "Css.Support.Data" set cssProperties)
+        (renderModule "Css.Support.Data" set cssProperties)
 
 
 
 -- DataSet -> Elm module
 
 
-elmModule :: Text -> DataSet -> [Text] -> Text
-elmModule name set cssPropsList =
+renderModule :: Text -> DataSet -> [Text] -> Text
+renderModule name set cssPropsList =
     let
         agentsMap :: HashMap Text Agent
         agentsMap =
             (agents set)
 
+        entriesList :: [(Text, Entry)]
+        entriesList =
+            (entries set)
+                |> HashMap.toList
+                |> List.sortOn fst
+
+        -- Text
+
         browsers :: Text
         browsers =
             agentsMap
                 |> HashMap.toList
-                |> map snd
-                |> map browser
-                |> map browserUnionValue
+                |> map (snd .> browser .> browserUnionValue)
                 |> List.sort
                 |> prepUnionValues
                 |> Text.intercalate "\n"
@@ -58,37 +64,22 @@ elmModule name set cssPropsList =
                 |> map (\s -> Text.concat [ "\"", s, "\"" ])
                 |> Text.intercalate ", "
 
-        entriesList :: [(Text, Entry)]
-        entriesList =
-            (entries set)
-                |> HashMap.toList
-                |> List.sortOn fst
-
         features :: Text
         features =
             entriesList
-                |> map (elmEntry agentsMap)
+                |> map (renderEntry agentsMap)
                 |> Text.intercalate "\n\n\n"
 
         featureFunctionNames :: Text
         featureFunctionNames =
             entriesList
-                |> map fst
-                |> map Cases.camelize
+                |> map (fst .> Cases.camelize)
                 |> Text.intercalate ", "
 
         overlap :: Text
         overlap =
             cssPropsList
-                |> map
-                    (\prop ->
-                        entriesList
-                            |> List.map (insertOverlapScore prop)
-                            |> List.filter (\(score, _) -> score > 0)
-                            |> List.sortOn (fst)
-                            |> lastMay
-                            |> map (snd .> Cases.camelize .> (,) prop)
-                    )
+                |> map (findOverlap entriesList)
                 |> filter Maybe.isJust
                 |> map Maybe.fromJust
                 |> map
@@ -96,6 +87,26 @@ elmModule name set cssPropsList =
                         [text|
                         "$cssProp" ->
                             $featureFunctionName
+                        |]
+                    )
+                |> Text.intercalate "\n"
+
+        prefixes :: Text
+        prefixes =
+            agentsMap
+                |> HashMap.toList
+                |> map
+                    (\(_, agent) ->
+                        (,)
+                            (browserUnionValue (browser agent))
+                            (prefix agent)
+                    )
+                |> List.sortOn fst
+                |> map
+                    (\(browser, prefixText) ->
+                        [text|
+                        $browser ->
+                            "$prefixText"
                         |]
                     )
                 |> Text.intercalate "\n"
@@ -119,9 +130,9 @@ elmModule name set cssPropsList =
         @docs Browser, BrowserSupport, Supported, Version
 
 
-        #  CSS Properties
+        # CSS
 
-        @docs standardCssProperties
+        @docs standardCssProperties, prefixFor
 
 
         # Overlap
@@ -172,7 +183,7 @@ elmModule name set cssPropsList =
 
 
 
-        -- CSS Properties
+        -- CSS
 
 
         {-| A list of all the standardized CSS properties.
@@ -180,6 +191,14 @@ elmModule name set cssPropsList =
         standardCssProperties : List String
         standardCssProperties =
             [ $cssProps ]
+
+
+        {-| Get the css-property prefix associated with a given `Browser`.
+        -}
+        prefixFor : Browser -> String
+        prefixFor browser =
+            case browser of
+                $prefixes
 
 
 
@@ -209,8 +228,8 @@ elmModule name set cssPropsList =
 -- Entries -> Elm functions
 
 
-elmEntry :: HashMap Text Agent -> (Text, Entry) -> Text
-elmEntry agents (key, entry) =
+renderEntry :: HashMap Text Agent -> (Text, Entry) -> Text
+renderEntry agents (key, entry) =
     let
         fnName :: Text
         fnName =
@@ -221,7 +240,7 @@ elmEntry agents (key, entry) =
             (stats entry)
                 |> HashMap.toList
                 |> List.sortOn fst
-                |> map (elmStatGroup agents entry)
+                |> map (renderStatGroup agents entry)
                 |> prepListValues
                 |> Text.intercalate "\n"
     in
@@ -235,8 +254,8 @@ elmEntry agents (key, entry) =
     |]
 
 
-elmStatGroup :: HashMap Text Agent -> Entry -> (Text, HashMap Text Text) -> Text
-elmStatGroup agents entry (key, statGroup) =
+renderStatGroup :: HashMap Text Agent -> Entry -> (Text, HashMap Text Text) -> Text
+renderStatGroup agents entry (key, statGroup) =
     let
         browserValue :: Text
         browserValue =
@@ -249,12 +268,12 @@ elmStatGroup agents entry (key, statGroup) =
     statGroup
         |> HashMap.toList
         |> List.sortOn statisticSortFn
-        |> map (elmStat entry browserValue)
+        |> map (renderStat entry browserValue)
         |> Text.intercalate "\n, "
 
 
-elmStat :: Entry -> Text -> (Text, Text) -> Text
-elmStat entry browserValue (key, stat) =
+renderStat :: Entry -> Text -> (Text, Text) -> Text
+renderStat entry browserValue (key, stat) =
     let
         noteValue :: Text
         noteValue =
@@ -281,6 +300,16 @@ elmStat entry browserValue (key, stat) =
 
 
 -- Overlap
+
+
+findOverlap :: [(Text, Entry)] -> Text -> Maybe (Text, Text)
+findOverlap entriesList cssProperty =
+    entriesList
+        |> List.map (insertOverlapScore cssProperty)
+        |> List.filter (\(score, _) -> score > 0)
+        |> List.sortOn (fst)
+        |> lastMay
+        |> map (snd .> Cases.camelize .> (,) cssProperty)
 
 
 ignoredOverlap :: [Text]
