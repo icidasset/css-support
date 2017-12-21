@@ -24,7 +24,7 @@
       },
       {
         "name": "forTarget",
-        "comment": " Find out of the given browser-version combination supports the given CSS property.\nReturns `NotSupported` when it cannot find any associated data.\n",
+        "comment": " Find out of the given browser-version combination supports the given CSS property.\nReturns `NotSupported` when it cannot find any associated data.\n\n    >>> forTarget \"flex\" (Data.Chrome, VersionNumber 60)\n    Supported\n\n    >>> forTarget \"flex\" (Data.Chrome, VersionNumber 22)\n    SupportedWithPrefix\n\n    >>> forTarget \"flex\" (Data.Chrome, VersionNumber 4)\n    PartiallySupportedWithPrefix\n\n    >>> forTarget \"flex\" (Data.Chrome, VersionNumber 1)\n    NotSupported\n\n",
         "type": "String -> Css.Support.Target -> Css.Support.Data.Supported"
       }
     ],
