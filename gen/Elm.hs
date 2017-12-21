@@ -83,8 +83,11 @@ elmModule name set cssPropsList =
                 |> map
                     (\prop ->
                         entriesList
-                            |> List.find (snd .> keywords .> List.elem prop)
-                            |> map (fst .> Cases.camelize .> (,) prop)
+                            |> List.map (insertOverlapScore prop)
+                            |> List.filter (\(score, _) -> score > 0)
+                            |> List.sortOn (fst)
+                            |> lastMay
+                            |> map (snd .> Cases.camelize .> (,) prop)
                     )
                 |> filter Maybe.isJust
                 |> map Maybe.fromJust
@@ -274,6 +277,57 @@ elmStat entry browserValue (key, stat) =
           , version = $versionValue
           }
     |]
+
+
+
+-- Overlap
+
+
+ignoredOverlap :: [Text]
+ignoredOverlap =
+    [ "background"
+    , "background-color"
+    , "background-position"
+    , "background-repeat"
+    , "border"
+    , "bottom"
+    , "color"
+    , "cursor"
+    , "display"
+    , "font-size"
+    , "font-weight"
+    , "height"
+    , "left"
+    , "line-height"
+    , "right"
+    , "text-align"
+    , "top"
+    , "width"
+    ]
+
+
+insertOverlapScore :: Text -> (Text, Entry) -> (Int, Text)
+insertOverlapScore cssProperty (key, entry) =
+    (overlapScore cssProperty key entry, key)
+
+
+overlapScore :: Text -> Text -> Entry -> Int
+overlapScore prop key entry =
+    List.foldl
+        (\score (x, bool) ->
+            if bool then score + x
+            else score
+        )
+        (
+            if List.elem prop ignoredOverlap then
+                -1000000
+            else
+                0
+        )
+        [ (100      , key == prop                                                           )
+        , (25       , Text.isInfixOf (Text.concat [ "`", prop, "`" ]) (description entry)   )
+        , (5        , List.elem prop (keywords entry)                                       )
+        ]
 
 
 

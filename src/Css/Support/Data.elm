@@ -105,6 +105,15 @@ standardCssProperties =
 overlap : String -> List BrowserSupport
 overlap cssProperty =
     case cssProperty of
+        "align-content" ->
+            flexbox
+        
+        "align-items" ->
+            flexbox
+        
+        "align-self" ->
+            flexbox
+        
         "all" ->
             cssAll
         
@@ -120,11 +129,17 @@ overlap cssProperty =
         "animation-timing-function" ->
             cssAnimation
         
-        "background" ->
-            cssBackgroundblendmode
+        "backface-visibility" ->
+            transforms3D
+        
+        "background-attachment" ->
+            backgroundAttachment
         
         "block-size" ->
             cssLogicalProps
+        
+        "border-image" ->
+            borderImage
         
         "border-image-outset" ->
             borderImage
@@ -141,6 +156,12 @@ overlap cssProperty =
         "border-image-width" ->
             borderImage
         
+        "border-radius" ->
+            borderRadius
+        
+        "border-top-left-radius" ->
+            borderRadius
+        
         "break-after" ->
             multicolumn
         
@@ -149,6 +170,9 @@ overlap cssProperty =
         
         "break-inside" ->
             multicolumn
+        
+        "caret-color" ->
+            cssCaretColor
         
         "clip" ->
             cssMasks
@@ -174,14 +198,23 @@ overlap cssProperty =
         "column-width" ->
             multicolumn
         
-        "direction" ->
-            cssDirPseudo
+        "content" ->
+            css3Attr
         
-        "display" ->
-            flowRoot
+        "counter-increment" ->
+            cssCounters
+        
+        "counter-reset" ->
+            cssCounters
+        
+        "direction" ->
+            cssAll
         
         "filter" ->
-            cssBackdropFilter
+            cssFilterFunction
+        
+        "flex" ->
+            flexbox
         
         "flex-basis" ->
             flexbox
@@ -199,13 +232,22 @@ overlap cssProperty =
             flexbox
         
         "font-feature-settings" ->
-            fontFeature
+            fontVariantAlternates
+        
+        "font-kerning" ->
+            fontKerning
+        
+        "font-size-adjust" ->
+            fontSizeAdjust
+        
+        "font-stretch" ->
+            cssFontStretch
         
         "font-variant" ->
             fontVariantAlternates
         
         "font-variant-alternates" ->
-            fontFeature
+            fontVariantAlternates
         
         "font-variant-ligatures" ->
             fontFeature
@@ -228,8 +270,8 @@ overlap cssProperty =
         "inline-size" ->
             cssLogicalProps
         
-        "left" ->
-            cssDirPseudo
+        "justify-content" ->
+            flexbox
         
         "mask" ->
             cssMasks
@@ -261,7 +303,19 @@ overlap cssProperty =
         "mix-blend-mode" ->
             cssMixblendmode
         
+        "object-fit" ->
+            objectFit
+        
+        "order" ->
+            flexbox
+        
+        "outline" ->
+            outline
+        
         "outline-color" ->
+            outline
+        
+        "outline-offset" ->
             outline
         
         "outline-style" ->
@@ -282,8 +336,8 @@ overlap cssProperty =
         "perspective" ->
             transforms3D
         
-        "right" ->
-            cssDirPseudo
+        "pointer-events" ->
+            pointerEvents
         
         "scroll-behavior" ->
             cssScrollBehavior
@@ -306,6 +360,9 @@ overlap cssProperty =
         "table-layout" ->
             cssTable
         
+        "text-decoration" ->
+            textDecoration
+        
         "text-decoration-color" ->
             textDecoration
         
@@ -327,8 +384,17 @@ overlap cssProperty =
         "text-emphasis-style" ->
             textEmphasis
         
+        "text-indent" ->
+            cssTextIndent
+        
+        "text-orientation" ->
+            cssTextOrientation
+        
+        "text-overflow" ->
+            textOverflow
+        
         "transform" ->
-            cssZoom
+            transforms3D
         
         "transform-origin" ->
             transforms2D
@@ -348,8 +414,20 @@ overlap cssProperty =
         "transition-timing-function" ->
             cssTransitions
         
+        "unicode-bidi" ->
+            cssAll
+        
+        "will-change" ->
+            willChange
+        
+        "word-break" ->
+            wordBreak
+        
         "word-wrap" ->
             wordwrap
+        
+        "writing-mode" ->
+            cssTextOrientation
 
         _ ->
             []

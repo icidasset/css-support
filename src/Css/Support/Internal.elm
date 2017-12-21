@@ -1,6 +1,9 @@
 module Css.Support.Internal exposing (..)
 
-import Css.Support.Data exposing (BrowserSupport, Supported(..))
+import Css.Support.Data exposing (BrowserSupport, Supported(..), Version(..))
+
+
+-- Supported
 
 
 atleastPartialSupport : BrowserSupport -> Bool
@@ -43,3 +46,39 @@ supportedToComparable sup =
 
         NotSupported ->
             5
+
+
+
+-- Versions
+
+
+includesVersion : Version -> Version -> Bool
+includesVersion target source =
+    case source of
+        AllVersions ->
+            True
+
+        TechnologyPreview ->
+            False
+
+        VersionNumber a ->
+            case target of
+                VersionNumber x ->
+                    x >= a
+
+                VersionRange x y ->
+                    a >= x && a <= y
+
+                _ ->
+                    False
+
+        VersionRange a b ->
+            case target of
+                VersionNumber x ->
+                    x >= a && x <= b
+
+                VersionRange x y ->
+                    x >= a && y <= b
+
+                _ ->
+                    False

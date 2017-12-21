@@ -19,7 +19,7 @@ module Css.Support exposing (..)
 
 -}
 
-import Css.Support.Data as Data exposing (Browser, BrowserSupport, Supported(..), Version)
+import Css.Support.Data as Data exposing (Browser, BrowserSupport, Supported(..), Version(..))
 import Css.Support.Internal exposing (..)
 import Dict exposing (Dict)
 
@@ -61,6 +61,19 @@ type alias Target =
 
 {-| Find out of the given browser-version combination supports the given CSS property.
 Returns `NotSupported` when it cannot find any associated data.
+
+    >>> forTarget "flex" (Data.Chrome, VersionNumber 60)
+    Supported
+
+    >>> forTarget "flex" (Data.Chrome, VersionNumber 22)
+    SupportedWithPrefix
+
+    >>> forTarget "flex" (Data.Chrome, VersionNumber 4)
+    PartiallySupportedWithPrefix
+
+    >>> forTarget "flex" (Data.Chrome, VersionNumber 1)
+    NotSupported
+
 -}
 forTarget : String -> Target -> Supported
 forTarget cssProperty ( browser, version ) =
@@ -70,7 +83,8 @@ forTarget cssProperty ( browser, version ) =
 
         overlap ->
             overlap
-                |> List.filter (\o -> (o.browser == browser) && (o.version == version))
+                |> List.filter (.browser >> (==) browser)
+                |> List.filter (.version >> includesVersion version)
                 |> List.sortBy (.support >> supportedToComparable)
                 |> List.head
                 |> Maybe.map .support

@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "elm-doctest src/Css/Support.elm"
+  },
+  "devDependencies": {
+    "elm-doctest": "^0.3.6"
+  }
+}

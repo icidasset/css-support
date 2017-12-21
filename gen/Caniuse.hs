@@ -68,6 +68,7 @@ data TemporaryDataSet =
 data TemporaryEntry =
     TemporaryEntry
         { categories :: [Text]
+        , description :: Aeson.Value
         , keywords :: Aeson.Value
         , notes :: Text
         , notesByNum :: Aeson.Value
@@ -121,7 +122,8 @@ data DataSet =
 
 data Entry =
     Entry
-        { keywords :: [Text]
+        { description :: Text
+        , keywords :: [Text]
         , notes :: Text
         , notesByNum :: HashMap Text Text
         , stats :: HashMap Text (HashMap Text Text)
@@ -249,7 +251,13 @@ filterOutUnnecessaryStatistics stats =
 entryTransformer :: TemporaryEntry -> Entry
 entryTransformer entry =
     Entry
-        { keywords =
+        { description =
+            description (entry :: TemporaryEntry)
+                |> decodeJsonValue
+                |> fromMaybe ""
+
+        --
+        , keywords =
             keywords (entry :: TemporaryEntry)
                 |> decodeJsonValue
                 |> map (Text.splitOn ",")

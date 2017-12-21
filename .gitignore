@@ -1,3 +1,5 @@
 /.stack-work
 /elm-stuff
+/node_modules
 *.cabal
+.tmp.js
