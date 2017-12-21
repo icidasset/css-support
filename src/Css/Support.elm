@@ -29,6 +29,29 @@ import Dict exposing (Dict)
 
 {-| Find out which browsers fully, or partially, support a given CSS property.
 Returns `Nothing` when it cannot find any associated data.
+
+
+## Example
+
+This is an example where we pick a single `BrowserSupport` from the result set.
+
+    -- Boolean flag (2nd argument)
+    >>> includePartialSupportData = True
+
+    -- Filter for our results
+    >>> internetExplorerOnly = .browser >> (==) Data.Ie
+
+    -- Run `compatible` function
+    >>> result =
+    >>>     compatible "grid-row" includePartialSupportData
+    >>>         |> Maybe.map (List.filter internetExplorerOnly)
+    >>>         |> Maybe.andThen (List.reverse >> List.head)
+    >>>         |> Maybe.map .support
+
+    -- 👩‍🔬
+    >>> result
+    Just PartiallySupportedWithPrefix
+
 -}
 compatible : String -> Bool -> Maybe (List BrowserSupport)
 compatible cssProperty includePartialSupport =
@@ -103,7 +126,8 @@ forTarget cssProperty ( browser, version ) =
 
 So in other words, this function will generate a compatibility table.
 
-    ## Example
+
+## Example
 
     >>> caniuse
     >>>   [ "align-items", "flex" ]
