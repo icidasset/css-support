@@ -52,6 +52,60 @@ supportedToComparable sup =
 -- Versions
 
 
+{-| Check if the `Version` named "target" (1st arg) is
+included in the `Version` named "source" (2nd arg).
+
+
+## Tests
+
+    >>> includesVersion (VersionNumber 1.5) (AllVersions)
+    True
+
+    >>> includesVersion (VersionNumber 1.5) (TechnologyPreview)
+    False
+
+    >>> includesVersion (VersionNumber 1.5) (VersionNumber 1)
+    True
+
+    >>> includesVersion (VersionNumber 1.5) (VersionNumber 1.5)
+    True
+
+    >>> includesVersion (VersionNumber 1.5) (VersionNumber 3)
+    False
+
+    >>> includesVersion (VersionNumber 1.5) (VersionRange 1.5 2)
+    True
+
+    >>> includesVersion (VersionNumber 1.5) (VersionRange 1 2)
+    True
+
+    >>> includesVersion (VersionNumber 1.5) (VersionRange 2 3)
+    False
+
+    -- Part two
+
+    >>> includesVersion (VersionRange 1 2) (VersionRange 0 3)
+    True
+
+    >>> includesVersion (VersionRange 1 2) (VersionRange 1 2)
+    True
+
+    >>> includesVersion (VersionRange 2 3) (VersionRange 1 2)
+    False
+
+    >>> includesVersion (VersionRange 2 3) (VersionRange 0 1)
+    False
+
+    >>> includesVersion (VersionRange 1 2) (VersionNumber 1)
+    True
+
+    >>> includesVersion (VersionRange 1 2) (VersionNumber 2)
+    True
+
+    >>> includesVersion (VersionRange 1 2) (VersionNumber 3)
+    False
+
+-}
 includesVersion : Version -> Version -> Bool
 includesVersion target source =
     case source of
