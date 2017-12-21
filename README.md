@@ -1,6 +1,6 @@
 ## CSS.Support
 
-A combination of the CSS-related data from [caniuse.com](https://caniuse.com/) and all the standardized CSS properties. More info in the Elm docs.
+A combination of the CSS-related data from [caniuse.com](https://caniuse.com/) and all the standardized CSS properties. Find out what the browser support is for CSS properties, check if a browser has support for a CSS property, etc. More info in the Elm docs.
 
 
 
