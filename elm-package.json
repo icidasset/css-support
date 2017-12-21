@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "summary": "CSS support",
+    "summary": "CSS support data and prefixes",
     "repository": "https://github.com/icidasset/css-support.git",
     "license": "BSD3",
     "source-directories": [
