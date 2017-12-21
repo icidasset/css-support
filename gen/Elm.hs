@@ -325,6 +325,7 @@ overlapScore prop key entry =
                 0
         )
         [ (100      , key == prop                                                           )
+        , (100      , key == Text.concat [ "css-", prop ]                                   )
         , (25       , Text.isInfixOf (Text.concat [ "`", prop, "`" ]) (description entry)   )
         , (5        , List.elem prop (keywords entry)                                       )
         ]

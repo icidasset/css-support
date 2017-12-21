@@ -117,6 +117,9 @@ overlap cssProperty =
         "all" ->
             cssAll
         
+        "animation" ->
+            cssAnimation
+        
         "animation-delay" ->
             cssAnimation
         
@@ -178,7 +181,7 @@ overlap cssProperty =
             cssMasks
         
         "clip-path" ->
-            cssMasks
+            cssClipPath
         
         "column-count" ->
             multicolumn
@@ -252,6 +255,9 @@ overlap cssProperty =
         "font-variant-ligatures" ->
             fontFeature
         
+        "grid" ->
+            cssGrid
+        
         "grid-column" ->
             cssGrid
         
@@ -260,6 +266,12 @@ overlap cssProperty =
         
         "grid-template" ->
             cssGrid
+        
+        "hanging-punctuation" ->
+            cssHangingPunctuation
+        
+        "hyphens" ->
+            cssHyphens
         
         "image-orientation" ->
             cssImageOrientation
@@ -272,6 +284,9 @@ overlap cssProperty =
         
         "justify-content" ->
             flexbox
+        
+        "letter-spacing" ->
+            cssLetterSpacing
         
         "mask" ->
             cssMasks
@@ -306,6 +321,9 @@ overlap cssProperty =
         "object-fit" ->
             objectFit
         
+        "opacity" ->
+            cssOpacity
+        
         "order" ->
             flexbox
         
@@ -339,6 +357,9 @@ overlap cssProperty =
         "pointer-events" ->
             pointerEvents
         
+        "resize" ->
+            cssResize
+        
         "scroll-behavior" ->
             cssScrollBehavior
         
@@ -359,6 +380,9 @@ overlap cssProperty =
         
         "table-layout" ->
             cssTable
+        
+        "text-align-last" ->
+            cssTextAlignLast
         
         "text-decoration" ->
             textDecoration
@@ -387,11 +411,17 @@ overlap cssProperty =
         "text-indent" ->
             cssTextIndent
         
+        "text-justify" ->
+            cssTextJustify
+        
         "text-orientation" ->
             cssTextOrientation
         
         "text-overflow" ->
             textOverflow
+        
+        "touch-action" ->
+            cssTouchAction
         
         "transform" ->
             transforms3D
@@ -427,7 +457,7 @@ overlap cssProperty =
             wordwrap
         
         "writing-mode" ->
-            cssTextOrientation
+            cssWritingMode
 
         _ ->
             []
