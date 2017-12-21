@@ -103,6 +103,40 @@ forTarget cssProperty ( browser, version ) =
 
 So in other words, this function will generate a compatibility table.
 
+    ## Example
+
+    >>> caniuse
+    >>>   [ "align-items", "flex" ]
+    >>>   [ (Data.Chrome, VersionNumber 5), (Data.Firefox, VersionNumber 30) ]
+    Dict.fromList
+        [ ( "align-items"
+          , [ { browser = Data.Chrome
+              , version = VersionNumber 5
+              , note = Nothing
+              , support = PartiallySupportedWithPrefix
+              }
+            , { browser = Data.Firefox
+              , version = VersionNumber 30
+              , note = Nothing
+              , support = Supported
+              }
+            ]
+          )
+        , ( "flex"
+          , [ { browser = Data.Chrome
+              , version = VersionNumber 5
+              , note = Nothing
+              , support = PartiallySupportedWithPrefix
+              }
+            , { browser = Data.Firefox
+              , version = VersionNumber 30
+              , note = Nothing
+              , support = Supported
+              }
+            ]
+          )
+        ]
+
 -}
 caniuse : List String -> List Target -> Dict String (List BrowserSupport)
 caniuse cssProperties targets =
