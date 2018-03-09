@@ -19,8 +19,8 @@
       },
       {
         "name": "compatible",
-        "comment": " Find out which browsers fully, or partially, support a given CSS property.\nReturns `Nothing` when it cannot find any associated data.\n\n\n## Example\n\nThis is an example where we pick a single `BrowserSupport` from the result set.\n\n    -- Boolean flag (2nd argument)\n    >>> includePartialSupportData = True\n\n    -- Filter for our results\n    >>> internetExplorerOnly = .browser >> (==) Data.Ie\n\n    -- Run `compatible` function\n    >>> result =\n    >>>     compatible \"grid-row\" includePartialSupportData\n    >>>         |> Maybe.map (List.filter internetExplorerOnly)\n    >>>         |> Maybe.andThen (List.reverse >> List.head)\n    >>>         |> Maybe.map .support\n\n    -- 👩‍🔬\n    >>> result\n    Just PartiallySupportedWithPrefix\n\n",
-        "type": "String -> Bool -> Maybe.Maybe (List Css.Support.Data.BrowserSupport)"
+        "comment": " Find out which browsers fully, or partially, support a given CSS property.\nReturns `Nothing` when it cannot find any associated data.\n\n\n## Example\n\nThis is an example where we pick a single `BrowserSupport` from the result set.\n\n    -- Filter for our results\n    >>> internetExplorerOnly = .browser >> (==) Data.Ie\n\n    -- Run `compatible` function\n    >>> result =\n    >>>     compatible \"grid-row\" { includePartialSupport = True }\n    >>>         |> Maybe.map (List.filter internetExplorerOnly)\n    >>>         |> Maybe.andThen (List.reverse >> List.head)\n    >>>         |> Maybe.map .support\n\n    -- 👩‍🔬\n    >>> result\n    Just PartiallySupportedWithPrefix\n\n",
+        "type": "String -> { includePartialSupport : Bool } -> Maybe.Maybe (List Css.Support.Data.BrowserSupport)"
       },
       {
         "name": "forTarget",
