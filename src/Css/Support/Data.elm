@@ -28,7 +28,7 @@ That's pretty much the gist of it.
 
 # Features
 
-@docs backgroundAttachment, backgroundImgOpts, backgroundPositionXY, backgroundRepeatRoundSpace, borderImage, borderRadius, calc, chUnit, cssAll, cssAnimation, cssAppearance, cssApplyRule, cssAtCounterStyle, cssBackdropFilter, cssBackgroundOffsets, cssBackgroundblendmode, cssBoxdecorationbreak, cssBoxshadow, cssCanvas, cssCaretColor, cssCaseInsensitive, cssClipPath, cssConicGradients, cssContainment, cssCounters, cssCrispEdges, cssCrossFade, cssDefaultPseudo, cssDescendantGtgt, cssDeviceadaptation, cssDirPseudo, cssDisplayContents, cssElementFunction, cssExclusions, cssFeaturequeries, cssFilterFunction, cssFilters, cssFirstLetter, cssFirstLine, cssFixed, cssFocusRing, cssFocusWithin, cssFontRenderingControls, cssFontStretch, cssGencontent, cssGradients, cssGrid, cssHangingPunctuation, cssHas, cssHyphens, cssImageOrientation, cssImageSet, cssInOutOfRange, cssIndeterminatePseudo, cssInitialLetter, cssInitialValue, cssLetterSpacing, cssLineClamp, cssLogicalProps, cssMarkerPseudo, cssMasks, cssMatchesPseudo, cssMediaInteraction, cssMediaResolution, cssMediaqueries, cssMixblendmode, cssMotionPaths, cssNamespaces, cssNotSelList, cssNthChildOf, cssOpacity, cssOptionalPseudo, cssOverflowAnchor, cssPageBreak, cssPlaceholder, cssPlaceholderShown, cssRebeccapurple, cssReflections, cssRegions, cssRepeatingGradients, cssResize, cssRevertValue, cssRrggbbaa, cssScrollBehavior, cssScrollbar, cssSel2, cssSel3, cssSelection, cssShapes, cssSnappoints, cssSticky, cssTable, cssTextAlignLast, cssTextIndent, cssTextJustify, cssTextOrientation, cssTextshadow, cssTouchAction, cssTransitions, cssUnsetValue, cssVariables, cssWidowsOrphans, cssWritingMode, cssZoom, css3Attr, css3Boxsizing, css3Colors, css3Cursors, css3CursorsNewer, css3Tabsize, currentcolor, devicepixelratio, flexbox, flowRoot, fontFeature, fontKerning, fontLoading, fontSizeAdjust, fontSmooth, fontUnicodeRange, fontVariantAlternates, fontface, getcomputedstyle, inlineBlock, intrinsicWidth, kerningPairsLigatures, minmaxwh, multibackgrounds, multicolumn, objectFit, outline, pointerEvents, rem, runIn, styleScoped, svgCss, textDecoration, textEmphasis, textOverflow, textSizeAdjust, textStroke, transforms2D, transforms3D, ttf, userSelectNone, variableFonts, viewportUnits, willChange, wordBreak, wordwrap
+@docs backgroundAttachment, backgroundImgOpts, backgroundPositionXY, backgroundRepeatRoundSpace, borderImage, borderRadius, calc, chUnit, cssAll, cssAnimation, cssAppearance, cssApplyRule, cssAtCounterStyle, cssBackdropFilter, cssBackgroundOffsets, cssBackgroundblendmode, cssBoxdecorationbreak, cssBoxshadow, cssCanvas, cssCaretColor, cssCaseInsensitive, cssClipPath, cssConicGradients, cssContainment, cssCounters, cssCrispEdges, cssCrossFade, cssDefaultPseudo, cssDescendantGtgt, cssDeviceadaptation, cssDirPseudo, cssDisplayContents, cssElementFunction, cssExclusions, cssFeaturequeries, cssFilterFunction, cssFilters, cssFirstLetter, cssFirstLine, cssFixed, cssFocusVisible, cssFocusWithin, cssFontRenderingControls, cssFontStretch, cssGencontent, cssGradients, cssGrid, cssHangingPunctuation, cssHas, cssHyphens, cssImageOrientation, cssImageSet, cssInOutOfRange, cssIndeterminatePseudo, cssInitialLetter, cssInitialValue, cssLetterSpacing, cssLineClamp, cssLogicalProps, cssMarkerPseudo, cssMasks, cssMatchesPseudo, cssMediaInteraction, cssMediaResolution, cssMediaqueries, cssMixblendmode, cssMotionPaths, cssNamespaces, cssNotSelList, cssNthChildOf, cssOpacity, cssOptionalPseudo, cssOverflowAnchor, cssOverscrollBehavior, cssPageBreak, cssPaintApi, cssPlaceholder, cssPlaceholderShown, cssReadOnlyWrite, cssRebeccapurple, cssReflections, cssRegions, cssRepeatingGradients, cssResize, cssRevertValue, cssRrggbbaa, cssScrollBehavior, cssScrollbar, cssSel2, cssSel3, cssSelection, cssShapes, cssSnappoints, cssSticky, cssTable, cssTextAlignLast, cssTextIndent, cssTextJustify, cssTextOrientation, cssTextshadow, cssTouchAction, cssTransitions, cssUnsetValue, cssVariables, cssWidowsOrphans, cssWritingMode, cssZoom, css3Attr, css3Boxsizing, css3Colors, css3Cursors, css3CursorsNewer, css3Tabsize, currentcolor, devicepixelratio, flexbox, flowRoot, fontFamilySystemUi, fontFeature, fontKerning, fontLoading, fontSizeAdjust, fontSmooth, fontUnicodeRange, fontVariantAlternates, fontface, getcomputedstyle, inlineBlock, intrinsicWidth, kerningPairsLigatures, minmaxwh, multibackgrounds, multicolumn, objectFit, outline, pointerEvents, prefersReducedMotion, rem, runIn, styleScoped, svgCss, textDecoration, textEmphasis, textOverflow, textSizeAdjust, textStroke, transforms2D, transforms3D, ttf, userSelectNone, variableFonts, viewportUnits, willChange, wordBreak, wordwrap
 
 -}
 
@@ -93,7 +93,7 @@ type Version
 -}
 standardCssProperties : List String
 standardCssProperties =
-    [ "align-content", "align-items", "align-self", "all", "animation", "animation-delay", "animation-direction", "animation-duration", "animation-fill-mode", "animation-iteration-count", "animation-name", "animation-play-state", "animation-timing-function", "backface-visibility", "background", "background-attachment", "background-blend-mode", "background-clip", "background-color", "background-image", "background-origin", "background-position", "background-repeat", "background-size", "block-size", "border", "border-block-end", "border-block-end-color", "border-block-end-style", "border-block-end-width", "border-block-start", "border-block-start-color", "border-block-start-style", "border-block-start-width", "border-bottom", "border-bottom-color", "border-bottom-left-radius", "border-bottom-right-radius", "border-bottom-style", "border-bottom-width", "border-collapse", "border-color", "border-image", "border-image-outset", "border-image-repeat", "border-image-slice", "border-image-source", "border-image-width", "border-inline-end", "border-inline-end-color", "border-inline-end-style", "border-inline-end-width", "border-inline-start", "border-inline-start-color", "border-inline-start-style", "border-inline-start-width", "border-left", "border-left-color", "border-left-style", "border-left-width", "border-radius", "border-right", "border-right-color", "border-right-style", "border-right-width", "border-spacing", "border-style", "border-top", "border-top-color", "border-top-left-radius", "border-top-right-radius", "border-top-style", "border-top-width", "border-width", "bottom", "box-decoration-break", "box-shadow", "box-sizing", "break-after", "break-before", "break-inside", "caption-side", "caret-color", "clear", "clip", "clip-path", "color", "column-count", "column-fill", "column-gap", "column-rule", "column-rule-color", "column-rule-style", "column-rule-width", "column-span", "column-width", "columns", "content", "counter-increment", "counter-reset", "cursor", "direction", "display", "empty-cells", "filter", "flex", "flex-basis", "flex-direction", "flex-flow", "flex-grow", "flex-shrink", "flex-wrap", "float", "font", "font-family", "font-feature-settings", "font-kerning", "font-language-override", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-synthesis", "font-variant", "font-variant-alternates", "font-variant-caps", "font-variant-east-asian", "font-variant-ligatures", "font-variant-numeric", "font-variant-position", "font-weight", "grid", "grid-area", "grid-auto-columns", "grid-auto-flow", "grid-auto-rows", "grid-column", "grid-column-end", "grid-column-gap", "grid-column-start", "grid-gap", "grid-row", "grid-row-end", "grid-row-gap", "grid-row-start", "grid-template", "grid-template-areas", "grid-template-columns", "grid-template-rows", "hanging-punctuation", "height", "hyphens", "image-orientation", "image-rendering", "image-resolution", "inline-size", "isolation", "justify-content", "left", "letter-spacing", "line-break", "line-height", "list-style", "list-style-image", "list-style-position", "list-style-type", "margin", "margin-block-end", "margin-block-start", "margin-bottom", "margin-inline-end", "margin-inline-start", "margin-left", "margin-right", "margin-top", "mask", "mask-clip", "mask-composite", "mask-image", "mask-mode", "mask-origin", "mask-position", "mask-repeat", "mask-size", "mask-type", "max-height", "max-width", "min-block-size", "min-height", "min-inline-size", "min-width", "mix-blend-mode", "object-fit", "object-position", "offset-block-end", "offset-block-start", "offset-inline-end", "offset-inline-start", "opacity", "order", "orphans", "outline", "outline-color", "outline-offset", "outline-style", "outline-width", "overflow", "overflow-wrap", "overflow-x", "overflow-y", "padding", "padding-block-end", "padding-block-start", "padding-bottom", "padding-inline-end", "padding-inline-start", "padding-left", "padding-right", "padding-top", "page-break-after", "page-break-before", "page-break-inside", "perspective", "perspective-origin", "pointer-events", "position", "quotes", "resize", "right", "ruby-align", "ruby-merge", "ruby-position", "scroll-behavior", "scroll-snap-coordinate", "scroll-snap-destination", "scroll-snap-type", "shape-image-threshold", "shape-margin", "shape-outside", "tab-size", "table-layout", "text-align", "text-align-last", "text-combine-upright", "text-decoration", "text-decoration-color", "text-decoration-line", "text-decoration-style", "text-emphasis", "text-emphasis-color", "text-emphasis-position", "text-emphasis-style", "text-indent", "text-justify", "text-orientation", "text-overflow", "text-rendering", "text-shadow", "text-transform", "text-underline-position", "top", "touch-action", "transform", "transform-box", "transform-origin", "transform-style", "transition", "transition-delay", "transition-duration", "transition-property", "transition-timing-function", "unicode-bidi", "vertical-align", "visibility", "white-space", "widows", "width", "will-change", "word-break", "word-spacing", "word-wrap", "writing-mode", "z-index" ]
+    [ "align-content", "align-items", "align-self", "all", "animation", "animation-delay", "animation-direction", "animation-duration", "animation-fill-mode", "animation-iteration-count", "animation-name", "animation-play-state", "animation-timing-function", "backface-visibility", "background", "background-attachment", "background-blend-mode", "background-clip", "background-color", "background-image", "background-origin", "background-position", "background-repeat", "background-size", "block-size", "border", "border-block-end", "border-block-end-color", "border-block-end-style", "border-block-end-width", "border-block-start", "border-block-start-color", "border-block-start-style", "border-block-start-width", "border-bottom", "border-bottom-color", "border-bottom-left-radius", "border-bottom-right-radius", "border-bottom-style", "border-bottom-width", "border-collapse", "border-color", "border-image", "border-image-outset", "border-image-repeat", "border-image-slice", "border-image-source", "border-image-width", "border-inline-end", "border-inline-end-color", "border-inline-end-style", "border-inline-end-width", "border-inline-start", "border-inline-start-color", "border-inline-start-style", "border-inline-start-width", "border-left", "border-left-color", "border-left-style", "border-left-width", "border-radius", "border-right", "border-right-color", "border-right-style", "border-right-width", "border-spacing", "border-style", "border-top", "border-top-color", "border-top-left-radius", "border-top-right-radius", "border-top-style", "border-top-width", "border-width", "bottom", "box-decoration-break", "box-shadow", "box-sizing", "break-after", "break-before", "break-inside", "caption-side", "caret-color", "clear", "clip", "clip-path", "color", "column-count", "column-fill", "column-gap", "column-rule", "column-rule-color", "column-rule-style", "column-rule-width", "column-span", "column-width", "columns", "content", "counter-increment", "counter-reset", "cursor", "direction", "display", "empty-cells", "filter", "flex", "flex-basis", "flex-direction", "flex-flow", "flex-grow", "flex-shrink", "flex-wrap", "float", "font", "font-family", "font-feature-settings", "font-kerning", "font-language-override", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-synthesis", "font-variant", "font-variant-alternates", "font-variant-caps", "font-variant-east-asian", "font-variant-ligatures", "font-variant-numeric", "font-variant-position", "font-weight", "grid", "grid-area", "grid-auto-columns", "grid-auto-flow", "grid-auto-rows", "grid-column", "grid-column-end", "grid-column-gap", "grid-column-start", "grid-gap", "grid-row", "grid-row-end", "grid-row-gap", "grid-row-start", "grid-template", "grid-template-areas", "grid-template-columns", "grid-template-rows", "hanging-punctuation", "height", "hyphens", "image-orientation", "image-rendering", "image-resolution", "inline-size", "isolation", "justify-content", "left", "letter-spacing", "line-break", "line-height", "list-style", "list-style-image", "list-style-position", "list-style-type", "margin", "margin-block-end", "margin-block-start", "margin-bottom", "margin-inline-end", "margin-inline-start", "margin-left", "margin-right", "margin-top", "mask", "mask-clip", "mask-composite", "mask-image", "mask-mode", "mask-origin", "mask-position", "mask-repeat", "mask-size", "mask-type", "max-height", "max-width", "min-block-size", "min-height", "min-inline-size", "min-width", "mix-blend-mode", "object-fit", "object-position", "offset-block-end", "offset-block-start", "offset-inline-end", "offset-inline-start", "opacity", "order", "orphans", "outline", "outline-color", "outline-offset", "outline-style", "outline-width", "overflow", "overflow-wrap", "overflow-x", "overflow-y", "padding", "padding-block-end", "padding-block-start", "padding-bottom", "padding-inline-end", "padding-inline-start", "padding-left", "padding-right", "padding-top", "page-break-after", "page-break-before", "page-break-inside", "perspective", "perspective-origin", "place-content", "pointer-events", "position", "quotes", "resize", "right", "rotate", "ruby-align", "ruby-merge", "ruby-position", "scale", "scroll-behavior", "scroll-snap-coordinate", "scroll-snap-destination", "scroll-snap-type", "shape-image-threshold", "shape-margin", "shape-outside", "tab-size", "table-layout", "text-align", "text-align-last", "text-combine-upright", "text-decoration", "text-decoration-color", "text-decoration-line", "text-decoration-style", "text-emphasis", "text-emphasis-color", "text-emphasis-position", "text-emphasis-style", "text-indent", "text-justify", "text-orientation", "text-overflow", "text-rendering", "text-shadow", "text-transform", "text-underline-position", "top", "touch-action", "transform", "transform-box", "transform-origin", "transform-style", "transition", "transition-delay", "transition-duration", "transition-property", "transition-timing-function", "translate", "unicode-bidi", "vertical-align", "visibility", "white-space", "widows", "width", "will-change", "word-break", "word-spacing", "word-wrap", "writing-mode", "z-index" ]
 
 
 {-| Get the css-property prefix associated with a given `Browser`.
@@ -294,6 +294,9 @@ overlap cssProperty =
         "flex-wrap" ->
             flexbox
         
+        "font-family" ->
+            fontFamilySystemUi
+        
         "font-feature-settings" ->
             fontVariantAlternates
         
@@ -420,6 +423,12 @@ overlap cssProperty =
         "resize" ->
             cssResize
         
+        "rotate" ->
+            transforms2D
+        
+        "scale" ->
+            transforms2D
+        
         "scroll-behavior" ->
             cssScrollBehavior
         
@@ -431,6 +440,12 @@ overlap cssProperty =
         
         "scroll-snap-type" ->
             cssSnappoints
+        
+        "shape-image-threshold" ->
+            cssShapes
+        
+        "shape-margin" ->
+            cssShapes
         
         "shape-outside" ->
             cssShapes
@@ -504,6 +519,9 @@ overlap cssProperty =
         "transition-timing-function" ->
             cssTransitions
         
+        "translate" ->
+            transforms2D
+        
         "unicode-bidi" ->
             cssAll
         
@@ -536,7 +554,7 @@ backgroundAttachment =
           Most mobile devices have a delay in updating the background position after scrolling a page with `fixed` backgrounds.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -557,10 +575,10 @@ backgroundAttachment =
     
     , { browser = UcBrowserForAndroid
       , note = Just """
-          Partial support refers to supporting `fixed` but not `local`
+          Most mobile devices have a delay in updating the background position after scrolling a page with `fixed` backgrounds.
           """
-      , support = PartiallySupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -733,7 +751,7 @@ backgroundImgOpts =
           Firefox, Chrome and Safari support the unofficial `-webkit-background-clip: text` (only with prefix)
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -757,7 +775,7 @@ backgroundImgOpts =
           Firefox, Chrome and Safari support the unofficial `-webkit-background-clip: text` (only with prefix)
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -962,7 +980,7 @@ backgroundPositionXY =
           A workaround for the lack of support in Firefox 31 - Firefox 48 is to use [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables). See [this Stack Overflow answer](https://stackoverflow.com/a/29282573/94197) for an example.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -986,7 +1004,7 @@ backgroundPositionXY =
           A workaround for the lack of support in Firefox 31 - Firefox 48 is to use [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables). See [this Stack Overflow answer](https://stackoverflow.com/a/29282573/94197) for an example.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -1111,7 +1129,7 @@ backgroundRepeatRoundSpace =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -1129,7 +1147,7 @@ backgroundRepeatRoundSpace =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -1248,7 +1266,7 @@ borderImage =
           Partial support refers to not supporting `border-image-repeat: space`
           """
       , support = PartiallySupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -1270,7 +1288,7 @@ borderImage =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = PartiallySupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -1493,7 +1511,7 @@ borderRadius =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -1511,7 +1529,7 @@ borderRadius =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -1674,7 +1692,7 @@ calc =
       Due to the way browsers handle [sub-pixel rounding](http://ejohn.org/blog/sub-pixel-problems-in-css/) differently, layouts using `calc()` expressions may have unexpected results.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -1704,7 +1722,7 @@ calc =
       Due to the way browsers handle [sub-pixel rounding](http://ejohn.org/blog/sub-pixel-problems-in-css/) differently, layouts using `calc()` expressions may have unexpected results.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -1913,7 +1931,7 @@ chUnit =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -1931,7 +1949,7 @@ chUnit =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -2030,7 +2048,7 @@ cssAll =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -2048,7 +2066,7 @@ cssAll =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -2145,7 +2163,7 @@ cssAnimation =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -2162,8 +2180,8 @@ cssAnimation =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -2334,7 +2352,7 @@ cssAppearance =
           The appearance property is supported with the `none` value, but not `auto`. WebKit, Blink, and Gecko browsers also support additional vendor specific values.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -2358,7 +2376,7 @@ cssAppearance =
           The appearance property is supported with the `none` value, but not `auto`. WebKit, Blink, and Gecko browsers also support additional vendor specific values.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -2483,7 +2501,7 @@ cssApplyRule =
           Can be enabled via the "Experimental web platform features" flag under about:flags
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -2507,7 +2525,7 @@ cssApplyRule =
           See also support for [CSS Variables](#feat=css-variables)
           """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -2632,7 +2650,7 @@ cssAtCounterStyle =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -2652,7 +2670,7 @@ cssAtCounterStyle =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -2753,7 +2771,7 @@ cssBackdropFilter =
           Can be enabled via the "Experimental Web Platform Features" flag
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -2773,7 +2791,7 @@ cssBackdropFilter =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -2880,7 +2898,7 @@ cssBackgroundOffsets =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -2898,7 +2916,7 @@ cssBackgroundOffsets =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -2995,7 +3013,7 @@ cssBackgroundblendmode =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -3013,7 +3031,7 @@ cssBackgroundblendmode =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -3146,7 +3164,7 @@ cssBoxdecorationbreak =
           Partial support refers to working for inline elements but not across column or page breaks.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -3166,7 +3184,7 @@ cssBoxdecorationbreak =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -3301,7 +3319,7 @@ cssBoxshadow =
           Can be partially emulated in older IE versions using the non-standard "shadow" filter.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -3325,7 +3343,7 @@ cssBoxshadow =
           Can be partially emulated in older IE versions using the non-standard "shadow" filter.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -3516,7 +3534,7 @@ cssCanvas =
           A similar effect can be achieved in Firefox 4+ using the -moz-element() background property
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -3539,8 +3557,8 @@ cssCanvas =
       , note = Just """
           A similar effect can be achieved in Firefox 4+ using the -moz-element() background property
           """
-      , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = NotSupported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -3697,7 +3715,7 @@ cssCaretColor =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -3714,8 +3732,8 @@ cssCaretColor =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -3769,7 +3787,7 @@ cssCaretColor =
     , { browser = IosSafari
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 3.2
+      , version = VersionNumber 11.3
       }
     
     , { browser = OperaMini
@@ -3793,7 +3811,7 @@ cssCaretColor =
     , { browser = Safari
       , note = Nothing
       , support = Supported
-      , version = TechnologyPreview
+      , version = VersionNumber 11.1
       }
     
     , { browser = SamsungInternet
@@ -3812,7 +3830,7 @@ cssCaseInsensitive =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -3829,8 +3847,8 @@ cssCaseInsensitive =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -3929,7 +3947,7 @@ cssClipPath =
           Partial support refers to supporting shapes and the `url(#foo)` syntax for inline SVG, but not shapes in external SVGs.
           """
       , support = PartiallySupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -3953,7 +3971,7 @@ cssClipPath =
           Partial support refers to supporting shapes and the `url(#foo)` syntax for inline SVG, but not shapes in external SVGs.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -4118,7 +4136,7 @@ cssConicGradients =
           Can be enabled via the "Experimental Web Platform Features" flag
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -4136,7 +4154,7 @@ cssConicGradients =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -4237,11 +4255,13 @@ cssContainment =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
-      , note = Nothing
+      , note = Just """
+          Partially supported in Firefox by enabling "layout.css.contain.enabled" in about:config
+          """
       , support = NotSupported
       , version = VersionNumber 57
       }
@@ -4254,8 +4274,8 @@ cssContainment =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -4297,8 +4317,18 @@ cssContainment =
       }
     
     , { browser = Firefox
-      , note = Nothing
+      , note = Just """
+          Partially supported in Firefox by enabling "layout.css.contain.enabled" in about:config
+          """
       , support = NotSupported
+      , version = VersionNumber 41
+      }
+    
+    , { browser = Firefox
+      , note = Just """
+          Partially supported in Firefox by enabling "layout.css.contain.enabled" in about:config
+          """
+      , support = PartiallySupported
       , version = VersionNumber 52
       }
     
@@ -4368,7 +4398,7 @@ cssCounters =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -4386,7 +4416,7 @@ cssCounters =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -4485,7 +4515,7 @@ cssCrispEdges =
           Supports the `pixelated` value, but not `crisp-edges`.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -4505,9 +4535,11 @@ cssCrispEdges =
       }
     
     , { browser = UcBrowserForAndroid
-      , note = Nothing
-      , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , note = Just """
+          Note that prefixes apply to the value (e.g. `-moz-crisp-edges`), not the `image-rendering` property.
+          """
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -4676,7 +4708,7 @@ cssCrossFade =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = SupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -4694,7 +4726,7 @@ cssCrossFade =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -4805,7 +4837,7 @@ cssDefaultPseudo =
           Whether `<option selected>` matches `:default` (per the spec) was not tested since `<select>`s and `<option>`s are generally not styleable, which makes it hard to formulate a test for this.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -4829,7 +4861,7 @@ cssDefaultPseudo =
           Does not match `<input type="checkbox" checked>` or `<input type="radio" checked>`
           """
       , support = PartiallySupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -5082,7 +5114,7 @@ cssDescendantGtgt =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -5100,7 +5132,7 @@ cssDescendantGtgt =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -5124,7 +5156,7 @@ cssDescendantGtgt =
     , { browser = Chrome
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 64
+      , version = VersionNumber 65
       }
     
     , { browser = Edge
@@ -5184,7 +5216,7 @@ cssDescendantGtgt =
     , { browser = Safari
       , note = Nothing
       , support = NotSupported
-      , version = TechnologyPreview
+      , version = VersionNumber 11.1
       }
     
     , { browser = SamsungInternet
@@ -5203,7 +5235,7 @@ cssDeviceadaptation =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -5221,7 +5253,7 @@ cssDeviceadaptation =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -5334,7 +5366,7 @@ cssDirPseudo =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -5352,7 +5384,7 @@ cssDirPseudo =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -5455,7 +5487,7 @@ cssDisplayContents =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -5473,7 +5505,7 @@ cssDisplayContents =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -5502,6 +5534,12 @@ cssDisplayContents =
       , version = VersionNumber 58
       }
     
+    , { browser = Chrome
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 65
+      }
+    
     , { browser = Edge
       , note = Nothing
       , support = NotSupported
@@ -5528,8 +5566,8 @@ cssDisplayContents =
     
     , { browser = IosSafari
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 3.2
+      , support = Supported
+      , version = VersionNumber 11.3
       }
     
     , { browser = OperaMini
@@ -5546,14 +5584,14 @@ cssDisplayContents =
     
     , { browser = Opera
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 9
+      , support = Supported
+      , version = VersionNumber 52
       }
     
     , { browser = Safari
       , note = Nothing
       , support = Supported
-      , version = TechnologyPreview
+      , version = VersionNumber 11.1
       }
     
     , { browser = SamsungInternet
@@ -5572,7 +5610,7 @@ cssElementFunction =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -5590,7 +5628,7 @@ cssElementFunction =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -5695,7 +5733,7 @@ cssExclusions =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -5713,7 +5751,7 @@ cssExclusions =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -5812,7 +5850,7 @@ cssFeaturequeries =
           See also the [CSS.supports() DOM API](#feat=css-supports-api)
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -5836,7 +5874,7 @@ cssFeaturequeries =
           See also the [CSS.supports() DOM API](#feat=css-supports-api)
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -5961,7 +5999,7 @@ cssFilterFunction =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -5979,7 +6017,7 @@ cssFilterFunction =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -6090,7 +6128,7 @@ cssFilters =
           Note that this property is significantly different from and incompatible with Microsoft's [older "filter" property](http://msdn.microsoft.com/en-us/library/ie/ms530752%28v=vs.85%29.aspx).
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -6113,8 +6151,8 @@ cssFilters =
       , note = Just """
           Note that this property is significantly different from and incompatible with Microsoft's [older "filter" property](http://msdn.microsoft.com/en-us/library/ie/ms530752%28v=vs.85%29.aspx).
           """
-      , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -6297,7 +6335,7 @@ cssFirstLetter =
           The spec says that both letters of digraphs which are always capitalized together (such as "IJ" in Dutch) should be matched by ::first-letter, but no browser has ever implemented this.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -6321,7 +6359,7 @@ cssFirstLetter =
           The spec says that both letters of digraphs which are always capitalized together (such as "IJ" in Dutch) should be matched by ::first-letter, but no browser has ever implemented this.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -6572,7 +6610,7 @@ cssFirstLine =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -6590,7 +6628,7 @@ cssFirstLine =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -6695,7 +6733,7 @@ cssFixed =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -6713,7 +6751,7 @@ cssFixed =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -6853,118 +6891,150 @@ cssFixed =
 
 
 
-{-| css-focus-ring
+{-| css-focus-visible
 -}
-cssFocusRing : List BrowserSupport
-cssFocusRing =
+cssFocusVisible : List BrowserSupport
+cssFocusVisible =
     [ { browser = ChromeForAndroid
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
       , note = Just """
-          As `-moz-focusring`
+          As `:-moz-focusring`
           """
       , support = SupportedWithPrefix
       , version = VersionNumber 57
       }
     
     , { browser = QqBrowser
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 1.2
       }
     
     , { browser = UcBrowserForAndroid
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 2.1
       }
     
     , { browser = BaiduBrowser
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 7.12
       }
     
     , { browser = BlackberryBrowser
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 7
       }
     
     , { browser = Chrome
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 4
       }
     
     , { browser = Edge
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 12
       }
     
     , { browser = Firefox
       , note = Just """
-          As `-moz-focusring`
+          As `:-moz-focusring`
           """
       , support = SupportedWithPrefix
       , version = VersionNumber 4
       }
     
     , { browser = Ie
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 5.5
       }
     
     , { browser = IeMobile
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 10
       }
     
     , { browser = IosSafari
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 3.2
       }
     
     , { browser = OperaMini
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = AllVersions
       }
     
     , { browser = OperaMobile
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 10
       }
     
     , { browser = Opera
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 9
       }
     
     , { browser = Safari
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 3.1
       }
     
     , { browser = SamsungInternet
-      , note = Nothing
+      , note = Just """
+          Previously drafted as `:focus-ring`
+          """
       , support = NotSupported
       , version = VersionNumber 4
       }
@@ -6979,7 +7049,7 @@ cssFocusWithin =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -6997,7 +7067,7 @@ cssFocusWithin =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -7110,7 +7180,7 @@ cssFontRenderingControls =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -7130,7 +7200,7 @@ cssFontRenderingControls =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -7199,8 +7269,8 @@ cssFontRenderingControls =
     
     , { browser = IosSafari
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 3.2
+      , support = Supported
+      , version = VersionNumber 11.3
       }
     
     , { browser = OperaMini
@@ -7234,7 +7304,7 @@ cssFontRenderingControls =
     , { browser = Safari
       , note = Nothing
       , support = Supported
-      , version = TechnologyPreview
+      , version = VersionNumber 11.1
       }
     
     , { browser = SamsungInternet
@@ -7255,7 +7325,7 @@ cssFontStretch =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -7272,8 +7342,8 @@ cssFontStretch =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -7372,7 +7442,7 @@ cssGencontent =
           For content to appear in pseudo-elements, the `content` property must be set (but may be an empty string).
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -7396,7 +7466,7 @@ cssGencontent =
           For content to appear in pseudo-elements, the `content` property must be set (but may be an empty string).
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -7535,7 +7605,7 @@ cssGradients =
       Firefox 10+, Opera 11.6+, Chrome 26+ and IE10+ also support the new "to (side)" syntax.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -7571,7 +7641,7 @@ cssGradients =
       Firefox 10+, Opera 11.6+, Chrome 26+ and IE10+ also support the new "to (side)" syntax.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -7912,7 +7982,7 @@ cssGrid =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -7931,8 +8001,8 @@ cssGrid =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -8129,7 +8199,7 @@ cssHangingPunctuation =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -8147,7 +8217,7 @@ cssHangingPunctuation =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -8244,7 +8314,7 @@ cssHas =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -8262,7 +8332,7 @@ cssHas =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -8361,7 +8431,7 @@ cssHyphens =
           Only supported on Android & Mac platforms (and only the "auto" value) for now. [See commit](https://crrev.com/ed7e106e0e48b3afb160a5bdbb37649e307d2b05) & related [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=652964).
           """
       , support = PartiallySupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -8384,8 +8454,8 @@ cssHyphens =
       , note = Just """
           Chrome < 55 and Android 4.0 Browser support "-webkit-hyphens: none", but not the "auto" property. It is [advisable to set the @lang attribute](http://blog.adrianroselli.com/2015/01/on-use-of-lang-attribute.html) on the HTML element to enable hyphenation support and improve accessibility.
           """
-      , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = PartiallySupported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -8528,7 +8598,7 @@ cssImageOrientation =
           Opening the image in a new tab in Chrome results in the image shown in the orientation according to the EXIF data.
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -8552,7 +8622,7 @@ cssImageOrientation =
           Opening the image in a new tab in Chrome results in the image shown in the orientation according to the EXIF data.
           """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -8677,7 +8747,7 @@ cssImageSet =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = SupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -8695,7 +8765,7 @@ cssImageSet =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -8752,6 +8822,14 @@ cssImageSet =
       , version = VersionRange 6.0 6.1
       }
     
+    , { browser = IosSafari
+      , note = Just """
+          Safari's implementation does not completely match the spec, in that only URLs are accepted for the image value and only 'x' is accepted as a resolution. See https://bugs.webkit.org/show_bug.cgi?id=160934.
+          """
+      , support = Supported
+      , version = VersionRange 10.0 10.2
+      }
+    
     , { browser = OperaMini
       , note = Nothing
       , support = NotSupported
@@ -8776,6 +8854,14 @@ cssImageSet =
       , version = VersionNumber 6
       }
     
+    , { browser = Safari
+      , note = Just """
+          Safari's implementation does not completely match the spec, in that only URLs are accepted for the image value and only 'x' is accepted as a resolution. See https://bugs.webkit.org/show_bug.cgi?id=160934.
+          """
+      , support = Supported
+      , version = VersionNumber 10
+      }
+    
     , { browser = SamsungInternet
       , note = Nothing
       , support = SupportedWithPrefix
@@ -8794,7 +8880,7 @@ cssInOutOfRange =
           Note that `<input type="range">` can never match `:out-of-range` because the user cannot input such a value, and if the initial value is outside the range, the browser immediately clamps it to the minimum or maximum (as appropriate) bound of the range.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -8815,10 +8901,10 @@ cssInOutOfRange =
     
     , { browser = UcBrowserForAndroid
       , note = Just """
-          `:in-range` also incorrectly matches temporal and `number` inputs which don't have `min` or `max` attributes. See [Edge bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/7200501/), [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=603268), [WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=156558).
+          Note that `<input type="range">` can never match `:out-of-range` because the user cannot input such a value, and if the initial value is outside the range, the browser immediately clamps it to the minimum or maximum (as appropriate) bound of the range.
           """
-      , support = PartiallySupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -9039,7 +9125,7 @@ cssIndeterminatePseudo =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -9059,7 +9145,7 @@ cssIndeterminatePseudo =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -9312,97 +9398,73 @@ cssIndeterminatePseudo =
 cssInitialLetter : List BrowserSupport
 cssInitialLetter =
     [ { browser = ChromeForAndroid
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 57
       }
     
     , { browser = QqBrowser
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 1.2
       }
     
     , { browser = UcBrowserForAndroid
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 2.1
       }
     
     , { browser = BaiduBrowser
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 7.12
       }
     
     , { browser = BlackberryBrowser
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 7
       }
     
     , { browser = Chrome
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 4
       }
     
     , { browser = Edge
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 12
       }
     
     , { browser = Firefox
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 2
       }
     
     , { browser = Ie
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 5.5
       }
     
     , { browser = IeMobile
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 10
       }
@@ -9416,33 +9478,25 @@ cssInitialLetter =
       }
     
     , { browser = OperaMini
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = AllVersions
       }
     
     , { browser = OperaMobile
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 10
       }
     
     , { browser = Opera
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 9
       }
     
     , { browser = Safari
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = PartiallySupported
       , version = VersionNumber 9
       }
@@ -9456,9 +9510,7 @@ cssInitialLetter =
       }
     
     , { browser = SamsungInternet
-      , note = Just """
-          Firefox status: [in-development](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880)
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 4
       }
@@ -9473,7 +9525,7 @@ cssInitialValue =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -9491,7 +9543,7 @@ cssInitialValue =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -9606,7 +9658,7 @@ cssLetterSpacing =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -9624,7 +9676,7 @@ cssLetterSpacing =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -9805,7 +9857,7 @@ cssLineClamp =
       Older (presto-based) versions of the Opera browser have also supported the same effect using the proprietary `-o-ellipsis-lastline;` value for `text-overflow`.
           """
       , support = SupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -9835,7 +9887,7 @@ cssLineClamp =
       Older (presto-based) versions of the Opera browser have also supported the same effect using the proprietary `-o-ellipsis-lastline;` value for `text-overflow`.
           """
       , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -10010,7 +10062,7 @@ cssLogicalProps =
           Like #1 but also supports `*-before` and `*-end` for `*-block-start` and `*-block-end` properties as well as `start` and `end` values for `text-align`
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -10034,7 +10086,7 @@ cssLogicalProps =
           Like #1 but also supports `*-before` and `*-end` for `*-block-start` and `*-block-end` properties as well as `start` and `end` values for `text-align`
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -10157,7 +10209,7 @@ cssMarkerPseudo =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -10175,7 +10227,7 @@ cssMarkerPseudo =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -10228,8 +10280,8 @@ cssMarkerPseudo =
     
     , { browser = IosSafari
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 3.2
+      , support = Supported
+      , version = VersionNumber 11.3
       }
     
     , { browser = OperaMini
@@ -10255,7 +10307,7 @@ cssMarkerPseudo =
           Safari supports [the definition in the CSS Pseudo-Elements Module Level 4](https://www.w3.org/TR/css-pseudo-4/#marker-pseudo) instead of one in the List module due to the flux definition in it.
           """
       , support = Supported
-      , version = TechnologyPreview
+      , version = VersionNumber 11.1
       }
     
     , { browser = SamsungInternet
@@ -10276,7 +10328,7 @@ cssMasks =
           Partial support in WebKit/Blink browsers refers to supporting the mask-image and mask-box-image properties, but lacking support for other parts of the spec.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -10298,7 +10350,7 @@ cssMasks =
           Partial support in WebKit/Blink browsers refers to supporting the mask-image and mask-box-image properties, but lacking support for other parts of the spec.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -10429,7 +10481,7 @@ cssMatchesPseudo =
           Only supports the `:-webkit-any()` pseudo-class, which is deprecated due to handling specificity incorrectly.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -10453,7 +10505,7 @@ cssMatchesPseudo =
           Only supports the `:-webkit-any()` pseudo-class, which is deprecated due to handling specificity incorrectly.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -10642,7 +10694,7 @@ cssMediaInteraction =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -10660,7 +10712,7 @@ cssMediaInteraction =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -10757,7 +10809,7 @@ cssMediaResolution =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -10775,7 +10827,7 @@ cssMediaResolution =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -10936,7 +10988,7 @@ cssMediaqueries =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -10954,7 +11006,7 @@ cssMediaqueries =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -11099,7 +11151,7 @@ cssMixblendmode =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -11116,8 +11168,8 @@ cssMixblendmode =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -11226,7 +11278,7 @@ cssMotionPaths =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -11243,8 +11295,8 @@ cssMotionPaths =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -11357,7 +11409,7 @@ cssNamespaces =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -11375,7 +11427,7 @@ cssNamespaces =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -11484,7 +11536,7 @@ cssNotSelList =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -11502,7 +11554,7 @@ cssNotSelList =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -11526,7 +11578,7 @@ cssNotSelList =
     , { browser = Chrome
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 64
+      , version = VersionNumber 65
       }
     
     , { browser = Edge
@@ -11538,7 +11590,7 @@ cssNotSelList =
     , { browser = Firefox
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 58
+      , version = VersionNumber 59
       }
     
     , { browser = Ie
@@ -11601,7 +11653,7 @@ cssNthChildOf =
           For support information for just `:nth-child()` see [CSS3 selector support](#feat=css-sel3)
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -11625,7 +11677,7 @@ cssNthChildOf =
           For support information for just `:nth-child()` see [CSS3 selector support](#feat=css-sel3)
           """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -11752,7 +11804,7 @@ cssOpacity =
           Transparency for elements in IE8 and older can be achieved using the proprietary "filter" property and does not work well with PNG images using alpha transparency.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -11776,7 +11828,7 @@ cssOpacity =
           Transparency for elements in IE8 and older can be achieved using the proprietary "filter" property and does not work well with PNG images using alpha transparency.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -11909,7 +11961,7 @@ cssOptionalPseudo =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -11927,7 +11979,7 @@ cssOptionalPseudo =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -12062,7 +12114,7 @@ cssOverflowAnchor =
           Mozilla has discussed a similar feature in [Bug 43114](https://bugzilla.mozilla.org/show_bug.cgi?id=43114).
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -12086,7 +12138,7 @@ cssOverflowAnchor =
           Mozilla has discussed a similar feature in [Bug 43114](https://bugzilla.mozilla.org/show_bug.cgi?id=43114).
           """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -12204,6 +12256,139 @@ cssOverflowAnchor =
 
 
 
+{-| css-overscroll-behavior
+-}
+cssOverscrollBehavior : List BrowserSupport
+cssOverscrollBehavior =
+    [ { browser = ChromeForAndroid
+      , note = Just """
+          Does not support `overscroll-behavior: none;` on the body element to prevent the overscroll glow and rubberbanding effects.
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 64
+      }
+    
+    , { browser = FirefoxForAndroid
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 57
+      }
+    
+    , { browser = QqBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 1.2
+      }
+    
+    , { browser = UcBrowserForAndroid
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 11.8
+      }
+    
+    , { browser = AndroidBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 2.1
+      }
+    
+    , { browser = BaiduBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 7.12
+      }
+    
+    , { browser = BlackberryBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 7
+      }
+    
+    , { browser = Chrome
+      , note = Just """
+          Does not support `overscroll-behavior: none;` on the body element to prevent the overscroll glow and rubberbanding effects.
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 63
+      }
+    
+    , { browser = Chrome
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 65
+      }
+    
+    , { browser = Edge
+      , note = Just """
+          Supports the precursor version of the property: [`-ms-scroll-chaining`](https://msdn.microsoft.com/en-us/library/hh772034%28v=vs.85%29.aspx), which works similarly. IE support is limited to Windows 8 & above
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 12
+      }
+    
+    , { browser = Firefox
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 59
+      }
+    
+    , { browser = Ie
+      , note = Just """
+          Supports the precursor version of the property: [`-ms-scroll-chaining`](https://msdn.microsoft.com/en-us/library/hh772034%28v=vs.85%29.aspx), which works similarly. IE support is limited to Windows 8 & above
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = IeMobile
+      , note = Just """
+          Supports the precursor version of the property: [`-ms-scroll-chaining`](https://msdn.microsoft.com/en-us/library/hh772034%28v=vs.85%29.aspx), which works similarly. IE support is limited to Windows 8 & above
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = IosSafari
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 3.2
+      }
+    
+    , { browser = OperaMini
+      , note = Nothing
+      , support = NotSupported
+      , version = AllVersions
+      }
+    
+    , { browser = OperaMobile
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = Opera
+      , note = Just """
+          Does not support `overscroll-behavior: none;` on the body element to prevent the overscroll glow and rubberbanding effects.
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 50
+      }
+    
+    , { browser = Safari
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 3.1
+      }
+    
+    , { browser = SamsungInternet
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 4
+      }
+    ]
+
+
+
 {-| css-page-break
 -}
 cssPageBreak : List BrowserSupport
@@ -12211,7 +12396,7 @@ cssPageBreak =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = PartiallySupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -12229,7 +12414,7 @@ cssPageBreak =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = PartiallySupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -12363,6 +12548,121 @@ cssPageBreak =
 
 
 
+{-| css-paint-api
+-}
+cssPaintApi : List BrowserSupport
+cssPaintApi =
+    [ { browser = ChromeForAndroid
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 64
+      }
+    
+    , { browser = FirefoxForAndroid
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 57
+      }
+    
+    , { browser = QqBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 1.2
+      }
+    
+    , { browser = UcBrowserForAndroid
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 11.8
+      }
+    
+    , { browser = AndroidBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 2.1
+      }
+    
+    , { browser = BaiduBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 7.12
+      }
+    
+    , { browser = BlackberryBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 7
+      }
+    
+    , { browser = Chrome
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 65
+      }
+    
+    , { browser = Edge
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 12
+      }
+    
+    , { browser = Firefox
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 2
+      }
+    
+    , { browser = Ie
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 5.5
+      }
+    
+    , { browser = IeMobile
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = IosSafari
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 3.2
+      }
+    
+    , { browser = OperaMini
+      , note = Nothing
+      , support = NotSupported
+      , version = AllVersions
+      }
+    
+    , { browser = OperaMobile
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = Opera
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 9
+      }
+    
+    , { browser = Safari
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 3.1
+      }
+    
+    , { browser = SamsungInternet
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 4
+      }
+    ]
+
+
+
 {-| css-placeholder
 -}
 cssPlaceholder : List BrowserSupport
@@ -12375,7 +12675,7 @@ cssPlaceholder =
       `::-ms-input-placeholder` for Edge (also supports webkit prefix)
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -12407,8 +12707,8 @@ cssPlaceholder =
       `:-ms-input-placeholder` for IE. 
       `::-ms-input-placeholder` for Edge (also supports webkit prefix)
           """
-      , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -12651,7 +12951,7 @@ cssPlaceholderShown =
           For support of styling the actual placeholder text itself, see [CSS ::placeholder](https://caniuse.com/#feat=css-placeholder)
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -12674,8 +12974,8 @@ cssPlaceholderShown =
       , note = Just """
           For support of styling the actual placeholder text itself, see [CSS ::placeholder](https://caniuse.com/#feat=css-placeholder)
           """
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -12793,6 +13093,213 @@ cssPlaceholderShown =
 
 
 
+{-| css-read-only-write
+-}
+cssReadOnlyWrite : List BrowserSupport
+cssReadOnlyWrite =
+    [ { browser = ChromeForAndroid
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 64
+      }
+    
+    , { browser = FirefoxForAndroid
+      , note = Nothing
+      , support = SupportedWithPrefix
+      , version = VersionNumber 57
+      }
+    
+    , { browser = QqBrowser
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 1.2
+      }
+    
+    , { browser = UcBrowserForAndroid
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 11.8
+      }
+    
+    , { browser = AndroidBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 2.1
+      }
+    
+    , { browser = AndroidBrowser
+      , note = Just """
+          Supports selector only for input and textarea fields, but not for contenteditable
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 2.3
+      }
+    
+    , { browser = AndroidBrowser
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 62
+      }
+    
+    , { browser = BaiduBrowser
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 7.12
+      }
+    
+    , { browser = BlackberryBrowser
+      , note = Just """
+          Supports selector only for input and textarea fields, but not for contenteditable
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 7
+      }
+    
+    , { browser = BlackberryBrowser
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = Chrome
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 4
+      }
+    
+    , { browser = Chrome
+      , note = Just """
+          Supports selector only for input and textarea fields, but not for contenteditable
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 15
+      }
+    
+    , { browser = Chrome
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 36
+      }
+    
+    , { browser = Edge
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 13
+      }
+    
+    , { browser = Firefox
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 2
+      }
+    
+    , { browser = Firefox
+      , note = Nothing
+      , support = SupportedWithPrefix
+      , version = VersionNumber 3
+      }
+    
+    , { browser = Ie
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 5.5
+      }
+    
+    , { browser = IeMobile
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = IosSafari
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 3.2
+      }
+    
+    , { browser = IosSafari
+      , note = Just """
+          Supports selector only for input and textarea fields, but not for contenteditable
+          """
+      , support = PartiallySupported
+      , version = VersionRange 4.2 4.3
+      }
+    
+    , { browser = IosSafari
+      , note = Nothing
+      , support = Supported
+      , version = VersionRange 9.0 9.2
+      }
+    
+    , { browser = OperaMini
+      , note = Nothing
+      , support = NotSupported
+      , version = AllVersions
+      }
+    
+    , { browser = OperaMobile
+      , note = Just """
+          Supports selector only for input and textarea fields, but not for contenteditable
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 11.5
+      }
+    
+    , { browser = OperaMobile
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 37
+      }
+    
+    , { browser = Opera
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 9
+      }
+    
+    , { browser = Opera
+      , note = Just """
+          Supports selector only for input and textarea fields, but not for contenteditable
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 11.5
+      }
+    
+    , { browser = Opera
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 23
+      }
+    
+    , { browser = Safari
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 3.1
+      }
+    
+    , { browser = Safari
+      , note = Just """
+          Supports selector only for input and textarea fields, but not for contenteditable
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 4
+      }
+    
+    , { browser = Safari
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 9
+      }
+    
+    , { browser = SamsungInternet
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 4
+      }
+    ]
+
+
+
 {-| css-rebeccapurple
 -}
 cssRebeccapurple : List BrowserSupport
@@ -12800,7 +13307,7 @@ cssRebeccapurple =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -12818,7 +13325,7 @@ cssRebeccapurple =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -12925,7 +13432,7 @@ cssReflections =
           Similar effect can be achieved in Firefox 4+ using the -moz-element() background property
           """
       , support = SupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -12949,7 +13456,7 @@ cssReflections =
           Similar effect can be achieved in Firefox 4+ using the -moz-element() background property
           """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -13074,7 +13581,7 @@ cssRegions =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -13092,7 +13599,7 @@ cssRegions =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -13161,6 +13668,12 @@ cssRegions =
       , version = VersionRange 7.0 7.1
       }
     
+    , { browser = IosSafari
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 11.3
+      }
+    
     , { browser = OperaMini
       , note = Nothing
       , support = NotSupported
@@ -13188,7 +13701,7 @@ cssRegions =
     , { browser = Safari
       , note = Nothing
       , support = NotSupported
-      , version = TechnologyPreview
+      , version = VersionNumber 11.1
       }
     
     , { browser = SamsungInternet
@@ -13209,7 +13722,7 @@ cssRepeatingGradients =
           Firefox 10+, Chrome 26+ and Opera 11.6+ also support the new "to (side)" syntax.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -13233,7 +13746,7 @@ cssRepeatingGradients =
           Firefox 10+, Chrome 26+ and Opera 11.6+ also support the new "to (side)" syntax.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -13430,7 +13943,7 @@ cssResize =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -13448,7 +13961,7 @@ cssResize =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -13559,7 +14072,7 @@ cssRevertValue =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -13577,7 +14090,7 @@ cssRevertValue =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -13676,7 +14189,7 @@ cssRrggbbaa =
           Support in Android WebView is currently disabled due to [this issue](https://bugs.chromium.org/p/chromium/issues/detail?id=618472)
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -13700,7 +14213,7 @@ cssRrggbbaa =
           Support in Android WebView is currently disabled due to [this issue](https://bugs.chromium.org/p/chromium/issues/detail?id=618472)
           """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -13833,7 +14346,7 @@ cssScrollBehavior =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -13851,7 +14364,7 @@ cssScrollBehavior =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -13966,7 +14479,7 @@ cssScrollbar =
           Supports scrollbar styling via CSS [pseudo-properties](https://webkit.org/blog/363/styling-scrollbars/).
           """
       , support = SupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -13990,7 +14503,7 @@ cssScrollbar =
           Supports scrollbar styling via CSS [pseudo-properties](https://webkit.org/blog/363/styling-scrollbars/).
           """
       , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -14141,7 +14654,7 @@ cssSel2 =
           Support for `:visited` styling [varies across browsers](http://sixrevisions.com/css/visited-pseudo-class-strange/) due to security concerns.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -14165,7 +14678,7 @@ cssSel2 =
           Support for `:visited` styling [varies across browsers](http://sixrevisions.com/css/visited-pseudo-class-strange/) due to security concerns.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -14298,7 +14811,7 @@ cssSel3 =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -14316,7 +14829,7 @@ cssSel3 =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -14427,7 +14940,7 @@ cssSelection =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -14444,8 +14957,8 @@ cssSelection =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -14548,11 +15061,13 @@ cssShapes =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
-      , note = Nothing
+      , note = Just """
+          Partially supported in Firefox by enabling "layout.css.shape-outside.enabled" in about:config
+          """
       , support = NotSupported
       , version = VersionNumber 57
       }
@@ -14566,7 +15081,7 @@ cssShapes =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -14608,9 +15123,11 @@ cssShapes =
       }
     
     , { browser = Firefox
-      , note = Nothing
+      , note = Just """
+          Partially supported in Firefox by enabling "layout.css.shape-outside.enabled" in about:config
+          """
       , support = NotSupported
-      , version = VersionNumber 2
+      , version = VersionNumber 51
       }
     
     , { browser = Ie
@@ -14685,7 +15202,7 @@ cssSnappoints =
           Works in the iOS WKWebView, but not UIWebView.
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -14709,7 +15226,7 @@ cssSnappoints =
           Works in the iOS WKWebView, but not UIWebView.
           """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -14738,10 +15255,10 @@ cssSnappoints =
     
     , { browser = Chrome
       , note = Just """
-          Works in the iOS WKWebView, but not UIWebView.
+          Available behind the "Experimental Web Platform features" feature flag
           """
       , support = NotSupported
-      , version = VersionNumber 4
+      , version = VersionNumber 66
       }
     
     , { browser = Edge
@@ -14850,7 +15367,7 @@ cssSticky =
           Supported on `th` elements, but not `thead` or `tr` - See [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=702927)
           """
       , support = PartiallySupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -14870,9 +15387,11 @@ cssSticky =
       }
     
     , { browser = UcBrowserForAndroid
-      , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , note = Just """
+          Supported on `th` elements, but not `thead` or `tr` - See [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=702927)
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -14925,12 +15444,6 @@ cssSticky =
       , version = VersionNumber 56
       }
     
-    , { browser = Chrome
-      , note = Nothing
-      , support = Supported
-      , version = VersionNumber 64
-      }
-    
     , { browser = Edge
       , note = Nothing
       , support = Supported
@@ -14951,6 +15464,12 @@ cssSticky =
           """
       , support = PartiallySupported
       , version = VersionNumber 32
+      }
+    
+    , { browser = Firefox
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 59
       }
     
     , { browser = Ie
@@ -15037,7 +15556,7 @@ cssTable =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -15055,7 +15574,7 @@ cssTable =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -15160,7 +15679,7 @@ cssTextAlignLast =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -15177,8 +15696,8 @@ cssTextAlignLast =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -15301,7 +15820,7 @@ cssTextIndent =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = PartiallySupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -15323,7 +15842,7 @@ cssTextIndent =
           Partial support refers to supporting a `<length>` value, but not the `each-line` or `hanging` keywords.
           """
       , support = PartiallySupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -15472,7 +15991,7 @@ cssTextJustify =
           `inter-word` and `distribute` values supported behind the "Experimental platform features" flag but `distribute` support [is buggy](https://bugs.chromium.org/p/chromium/issues/detail?id=467406)
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -15494,7 +16013,7 @@ cssTextJustify =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -15623,7 +16142,7 @@ cssTextOrientation =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -15640,8 +16159,8 @@ cssTextOrientation =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -15746,7 +16265,7 @@ cssTextshadow =
           Opera Mini ignores the blur-radius set, so no blur effect is visible. Text-shadow behavior can be somewhat emulated in older IE versions using the non-standard "dropshadow" or "glow" filters.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -15770,7 +16289,7 @@ cssTextshadow =
           Opera Mini ignores the blur-radius set, so no blur effect is visible. Text-shadow behavior can be somewhat emulated in older IE versions using the non-standard "dropshadow" or "glow" filters.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -15911,7 +16430,7 @@ cssTouchAction =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -15929,7 +16448,7 @@ cssTouchAction =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -16062,7 +16581,7 @@ cssTransitions =
           Support listed is for `transition` properties as well as the `transitionend` event.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -16086,7 +16605,7 @@ cssTransitions =
           Support listed is for `transition` properties as well as the `transitionend` event.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -16315,7 +16834,7 @@ cssUnsetValue =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -16332,8 +16851,8 @@ cssUnsetValue =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -16430,7 +16949,7 @@ cssVariables =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -16447,8 +16966,8 @@ cssVariables =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -16571,7 +17090,7 @@ cssWidowsOrphans =
           Some older WebKit-based browsers recognize the properties, but do not appear to have actual support
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -16595,7 +17114,7 @@ cssWidowsOrphans =
           Some older WebKit-based browsers recognize the properties, but do not appear to have actual support
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -16736,7 +17255,7 @@ cssWritingMode =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -16753,8 +17272,8 @@ cssWritingMode =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -16917,7 +17436,7 @@ cssZoom =
           Originally implemented only in Internet Explorer. Although several other browsers support the property, using `transform: scale()` is the recommended solution to scale content.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -16941,7 +17460,7 @@ cssZoom =
           Originally implemented only in Internet Explorer. Although several other browsers support the property, using `transform: scale()` is the recommended solution to scale content.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -17072,109 +17591,145 @@ cssZoom =
 css3Attr : List BrowserSupport
 css3Attr =
     [ { browser = ChromeForAndroid
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 57
       }
     
     , { browser = QqBrowser
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 1.2
       }
     
     , { browser = UcBrowserForAndroid
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 2.1
       }
     
     , { browser = BaiduBrowser
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 7.12
       }
     
     , { browser = BlackberryBrowser
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 7
       }
     
     , { browser = Chrome
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 4
       }
     
     , { browser = Edge
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 12
       }
     
     , { browser = Firefox
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 2
       }
     
     , { browser = Ie
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 5.5
       }
     
     , { browser = IeMobile
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 10
       }
     
     , { browser = IosSafari
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 3.2
       }
     
     , { browser = OperaMini
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = AllVersions
       }
     
     , { browser = OperaMobile
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 10
       }
     
     , { browser = Opera
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 9
       }
     
     , { browser = Safari
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 3.1
       }
     
     , { browser = SamsungInternet
-      , note = Nothing
+      , note = Just """
+          See the [generated content](/#feat=css-gencontent) table for support for `attr()` for the `content` property.
+          """
       , support = NotSupported
       , version = VersionNumber 4
       }
@@ -17188,15 +17743,15 @@ css3Boxsizing : List BrowserSupport
 css3Boxsizing =
     [ { browser = ChromeForAndroid
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 57
@@ -17204,7 +17759,7 @@ css3Boxsizing =
     
     , { browser = QqBrowser
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 1.2
@@ -17212,15 +17767,15 @@ css3Boxsizing =
     
     , { browser = UcBrowserForAndroid
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = SupportedWithPrefix
       , version = VersionNumber 2.1
@@ -17228,7 +17783,7 @@ css3Boxsizing =
     
     , { browser = AndroidBrowser
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 4
@@ -17236,7 +17791,7 @@ css3Boxsizing =
     
     , { browser = BaiduBrowser
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 7.12
@@ -17244,7 +17799,7 @@ css3Boxsizing =
     
     , { browser = BlackberryBrowser
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = SupportedWithPrefix
       , version = VersionNumber 7
@@ -17252,7 +17807,7 @@ css3Boxsizing =
     
     , { browser = BlackberryBrowser
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 10
@@ -17260,7 +17815,7 @@ css3Boxsizing =
     
     , { browser = Chrome
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = SupportedWithPrefix
       , version = VersionNumber 4
@@ -17268,7 +17823,7 @@ css3Boxsizing =
     
     , { browser = Chrome
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 10
@@ -17276,7 +17831,7 @@ css3Boxsizing =
     
     , { browser = Edge
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 12
@@ -17284,7 +17839,7 @@ css3Boxsizing =
     
     , { browser = Firefox
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = SupportedWithPrefix
       , version = VersionNumber 2
@@ -17292,7 +17847,7 @@ css3Boxsizing =
     
     , { browser = Firefox
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 29
@@ -17300,7 +17855,7 @@ css3Boxsizing =
     
     , { browser = Ie
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = NotSupported
       , version = VersionNumber 5.5
@@ -17308,7 +17863,7 @@ css3Boxsizing =
     
     , { browser = Ie
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 8
@@ -17316,7 +17871,7 @@ css3Boxsizing =
     
     , { browser = IeMobile
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 10
@@ -17324,7 +17879,7 @@ css3Boxsizing =
     
     , { browser = IosSafari
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = SupportedWithPrefix
       , version = VersionNumber 3.2
@@ -17332,7 +17887,7 @@ css3Boxsizing =
     
     , { browser = IosSafari
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionRange 5.0 5.1
@@ -17340,7 +17895,7 @@ css3Boxsizing =
     
     , { browser = OperaMini
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = AllVersions
@@ -17348,7 +17903,7 @@ css3Boxsizing =
     
     , { browser = OperaMobile
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 10
@@ -17356,7 +17911,7 @@ css3Boxsizing =
     
     , { browser = Opera
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionRange 9.5 9.6
@@ -17364,7 +17919,7 @@ css3Boxsizing =
     
     , { browser = Safari
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = SupportedWithPrefix
       , version = VersionNumber 3.1
@@ -17372,7 +17927,7 @@ css3Boxsizing =
     
     , { browser = Safari
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 5.1
@@ -17380,7 +17935,7 @@ css3Boxsizing =
     
     , { browser = SamsungInternet
       , note = Just """
-          Firefox currently also supports the `padding-box` in addition to `content-box` and `border-box`, though this value has been removed from the specification.
+          Firefox versions before 57 also supported the `padding-box` value for `box-sizing`, though this value was been removed from the specification and later versions of the browser.
           """
       , support = Supported
       , version = VersionNumber 4
@@ -17396,7 +17951,7 @@ css3Colors =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -17414,7 +17969,7 @@ css3Colors =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -17523,7 +18078,7 @@ css3Cursors =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -17541,7 +18096,7 @@ css3Cursors =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -17680,7 +18235,7 @@ css3CursorsNewer =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -17698,7 +18253,7 @@ css3CursorsNewer =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -17825,7 +18380,7 @@ css3Tabsize =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -17843,7 +18398,7 @@ css3Tabsize =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -17996,7 +18551,7 @@ currentcolor =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -18014,7 +18569,7 @@ currentcolor =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -18119,7 +18674,7 @@ devicepixelratio =
           As the page is zoomed in the number of device pixels that one CSS pixel covers increases, and therefore the value of devicePixelRatio will also increase.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -18143,7 +18698,7 @@ devicepixelratio =
           As the page is zoomed in the number of device pixels that one CSS pixel covers increases, and therefore the value of devicePixelRatio will also increase.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -18270,7 +18825,7 @@ flexbox =
           Most partial support refers to supporting an [older version](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) of the specification or an [older syntax](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/).
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -18291,10 +18846,10 @@ flexbox =
     
     , { browser = UcBrowserForAndroid
       , note = Just """
-          Only supports the [old flexbox](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723) specification and does not support wrapping.
+          Most partial support refers to supporting an [older version](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) of the specification or an [older syntax](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/).
           """
-      , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -18529,7 +19084,7 @@ flowRoot =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -18547,7 +19102,7 @@ flowRoot =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -18637,6 +19192,151 @@ flowRoot =
 
 
 
+{-| font-family-system-ui
+-}
+fontFamilySystemUi : List BrowserSupport
+fontFamilySystemUi =
+    [ { browser = ChromeForAndroid
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 64
+      }
+    
+    , { browser = FirefoxForAndroid
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 57
+      }
+    
+    , { browser = QqBrowser
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 1.2
+      }
+    
+    , { browser = UcBrowserForAndroid
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 11.8
+      }
+    
+    , { browser = AndroidBrowser
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 62
+      }
+    
+    , { browser = BaiduBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 7.12
+      }
+    
+    , { browser = BlackberryBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 7
+      }
+    
+    , { browser = Chrome
+      , note = Just """
+          Supported as the 'BlinkMacSystemFont'  value (only on Mac)
+          """
+      , support = NotSupported
+      , version = VersionNumber 53
+      }
+    
+    , { browser = Chrome
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 56
+      }
+    
+    , { browser = Edge
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 12
+      }
+    
+    , { browser = Firefox
+      , note = Just """
+          Supported as the `-apple-ui` value (only on Mac)
+          """
+      , support = PartiallySupported
+      , version = VersionNumber 43
+      }
+    
+    , { browser = Ie
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 5.5
+      }
+    
+    , { browser = IeMobile
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = IosSafari
+      , note = Just """
+          Supported as the `-apple-ui` value (only on Mac)
+          """
+      , support = PartiallySupported
+      , version = VersionRange 9.0 9.2
+      }
+    
+    , { browser = IosSafari
+      , note = Nothing
+      , support = Supported
+      , version = VersionRange 11.0 11.2
+      }
+    
+    , { browser = OperaMini
+      , note = Nothing
+      , support = NotSupported
+      , version = AllVersions
+      }
+    
+    , { browser = OperaMobile
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 37
+      }
+    
+    , { browser = Opera
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 43
+      }
+    
+    , { browser = Safari
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 9
+      }
+    
+    , { browser = Safari
+      , note = Nothing
+      , support = PartiallySupported
+      , version = VersionNumber 9.1
+      }
+    
+    , { browser = Safari
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 11
+      }
+    
+    , { browser = SamsungInternet
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 6.2
+      }
+    ]
+
+
+
 {-| font-feature
 -}
 fontFeature : List BrowserSupport
@@ -18646,7 +19346,7 @@ fontFeature =
           Whenever possible, font-variant shorthand property or an associated longhand property, font-variant-ligatures, font-variant-caps, font-variant-east-asian, font-variant-alternates, font-variant-numeric or font-variant-position should be used. This property is a low-level feature designed to handle special cases where no other way to enable or access an OpenType font feature exists. In particular, this CSS property shouldn't be used to enable small caps.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -18670,7 +19370,7 @@ fontFeature =
           Whenever possible, font-variant shorthand property or an associated longhand property, font-variant-ligatures, font-variant-caps, font-variant-east-asian, font-variant-alternates, font-variant-numeric or font-variant-position should be used. This property is a low-level feature designed to handle special cases where no other way to enable or access an OpenType font feature exists. In particular, this CSS property shouldn't be used to enable small caps.
           """
       , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -18885,7 +19585,7 @@ fontKerning =
           Browsers with support for [font feature settings](https://caniuse.com/#feat=font-feature) can also set kerning value.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -18909,7 +19609,7 @@ fontKerning =
           Browsers with support for [font feature settings](https://caniuse.com/#feat=font-feature) can also set kerning value.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -19074,7 +19774,7 @@ fontLoading =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -19092,7 +19792,7 @@ fontLoading =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -19197,7 +19897,7 @@ fontSizeAdjust =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -19219,7 +19919,7 @@ fontSizeAdjust =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -19322,7 +20022,7 @@ fontSmooth =
           Though present in early (2002) drafts of CSS3 Fonts, `font-smooth` has been removed from this specification and is currently not on the standard track.
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -19346,7 +20046,7 @@ fontSmooth =
           Though present in early (2002) drafts of CSS3 Fonts, `font-smooth` has been removed from this specification and is currently not on the standard track.
           """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -19465,7 +20165,7 @@ fontUnicodeRange =
           Partial support indicates that unnecessary code-ranges are downloaded by the browser - see [browser test matrix](https://docs.google.com/a/chromium.org/spreadsheets/d/18h-1gaosu4-KYxH8JUNL6ZDuOsOKmWfauoai3CS3hPY/edit?pli=1#gid=0).
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -19488,8 +20188,8 @@ fontUnicodeRange =
       , note = Just """
           Partial support indicates that unnecessary code-ranges are downloaded by the browser - see [browser test matrix](https://docs.google.com/a/chromium.org/spreadsheets/d/18h-1gaosu4-KYxH8JUNL6ZDuOsOKmWfauoai3CS3hPY/edit?pli=1#gid=0).
           """
-      , support = PartiallySupported
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -19546,6 +20246,14 @@ fontUnicodeRange =
           """
       , support = PartiallySupported
       , version = VersionNumber 12
+      }
+    
+    , { browser = Edge
+      , note = Just """
+          Partial support indicates that unnecessary code-ranges are downloaded by the browser - see [browser test matrix](https://docs.google.com/a/chromium.org/spreadsheets/d/18h-1gaosu4-KYxH8JUNL6ZDuOsOKmWfauoai3CS3hPY/edit?pli=1#gid=0).
+          """
+      , support = Supported
+      , version = VersionNumber 17
       }
     
     , { browser = Firefox
@@ -19672,7 +20380,7 @@ fontVariantAlternates =
           Low-level syntax available in [font-feature-settings](https://caniuse.com/#feat=font-feature) property equivalent to OpenType features: salt, ss01 through ss20, cv01 through cv99, swsh, cswh, ornm, nalt
           """
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -19694,7 +20402,7 @@ fontVariantAlternates =
           Low-level syntax available in [font-feature-settings](https://caniuse.com/#feat=font-feature) property equivalent to OpenType features: salt, ss01 through ss20, cv01 through cv99, swsh, cswh, ornm, nalt
           """
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -19855,7 +20563,7 @@ fontface =
           Not supported by IE Mobile 9 and below.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -19879,7 +20587,7 @@ fontface =
           Not supported by IE Mobile 9 and below.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -20036,7 +20744,7 @@ getcomputedstyle =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -20054,7 +20762,7 @@ getcomputedstyle =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -20217,7 +20925,7 @@ inlineBlock =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -20235,7 +20943,7 @@ inlineBlock =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -20352,7 +21060,7 @@ intrinsicWidth =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -20371,10 +21079,12 @@ intrinsicWidth =
     
     , { browser = UcBrowserForAndroid
       , note = Just """
-          Does not support the `flex-basis` property. See [specs](https://www.w3.org/TR/2015/WD-css-flexbox-1-20150514/#flex-basis-property), [Blink bug](https://codereview.chromium.org/1304853002/), [Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1055887).
+          Prefixes are on the values, not the property names (e.g. -webkit-min-content)
+      
+      Older webkit browsers also support the unofficial `intrinsic` value which acts the same as `max-content`.
           """
-      , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -20559,7 +21269,7 @@ kerningPairsLigatures =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -20577,7 +21287,7 @@ kerningPairsLigatures =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -20688,7 +21398,7 @@ minmaxwh =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -20706,7 +21416,7 @@ minmaxwh =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -20825,7 +21535,7 @@ multibackgrounds =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -20843,7 +21553,7 @@ multibackgrounds =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -20940,12 +21650,12 @@ multicolumn =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupported
       , version = VersionNumber 57
@@ -20953,7 +21663,7 @@ multicolumn =
     
     , { browser = QqBrowser
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupported
       , version = VersionNumber 1.2
@@ -20961,8 +21671,8 @@ multicolumn =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -20979,7 +21689,7 @@ multicolumn =
     
     , { browser = BaiduBrowser
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupported
       , version = VersionNumber 7.12
@@ -21011,7 +21721,7 @@ multicolumn =
     
     , { browser = Firefox
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupportedWithPrefix
       , version = VersionNumber 2
@@ -21019,7 +21729,7 @@ multicolumn =
     
     , { browser = Firefox
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupported
       , version = VersionNumber 52
@@ -21045,7 +21755,7 @@ multicolumn =
     
     , { browser = IosSafari
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupportedWithPrefix
       , version = VersionRange 7.0 7.1
@@ -21053,7 +21763,7 @@ multicolumn =
     
     , { browser = IosSafari
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupported
       , version = VersionRange 9.0 9.2
@@ -21079,7 +21789,7 @@ multicolumn =
     
     , { browser = OperaMobile
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupported
       , version = VersionNumber 37
@@ -21111,7 +21821,7 @@ multicolumn =
     
     , { browser = Safari
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupportedWithPrefix
       , version = VersionNumber 7
@@ -21119,7 +21829,7 @@ multicolumn =
     
     , { browser = Safari
       , note = Just """
-          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*`.
+          Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. WebKit- and Blink-based browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties to accomplish the same result (but only the `auto` and `always` values). Firefox does not support `break-*` but does support the `page-break-*` properties to accomplish the same result.
           """
       , support = PartiallySupported
       , version = VersionNumber 9
@@ -21153,7 +21863,7 @@ objectFit =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -21171,7 +21881,7 @@ objectFit =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -21306,7 +22016,7 @@ outline =
           Firefox also supports the non-standard `-moz-outline-radius` property that acts similar to `border-radius`.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -21330,7 +22040,7 @@ outline =
           Firefox also supports the non-standard `-moz-outline-radius` property that acts similar to `border-radius`.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -21499,7 +22209,7 @@ pointerEvents =
           Already part of the SVG specification, and all SVG-supporting browsers appear to support the property on SVG elements.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -21523,7 +22233,7 @@ pointerEvents =
           Already part of the SVG specification, and all SVG-supporting browsers appear to support the property on SVG elements.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -21641,6 +22351,121 @@ pointerEvents =
 
 
 
+{-| prefers-reduced-motion
+-}
+prefersReducedMotion : List BrowserSupport
+prefersReducedMotion =
+    [ { browser = ChromeForAndroid
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 64
+      }
+    
+    , { browser = FirefoxForAndroid
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 57
+      }
+    
+    , { browser = QqBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 1.2
+      }
+    
+    , { browser = UcBrowserForAndroid
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 11.8
+      }
+    
+    , { browser = AndroidBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 2.1
+      }
+    
+    , { browser = BaiduBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 7.12
+      }
+    
+    , { browser = BlackberryBrowser
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 7
+      }
+    
+    , { browser = Chrome
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 4
+      }
+    
+    , { browser = Edge
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 12
+      }
+    
+    , { browser = Firefox
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 2
+      }
+    
+    , { browser = Ie
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 5.5
+      }
+    
+    , { browser = IeMobile
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = IosSafari
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 10.3
+      }
+    
+    , { browser = OperaMini
+      , note = Nothing
+      , support = NotSupported
+      , version = AllVersions
+      }
+    
+    , { browser = OperaMobile
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 10
+      }
+    
+    , { browser = Opera
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 9
+      }
+    
+    , { browser = Safari
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 10.1
+      }
+    
+    , { browser = SamsungInternet
+      , note = Nothing
+      , support = NotSupported
+      , version = VersionNumber 4
+      }
+    ]
+
+
+
 {-| rem
 -}
 rem : List BrowserSupport
@@ -21648,7 +22473,7 @@ rem =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -21666,7 +22491,7 @@ rem =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -21785,7 +22610,7 @@ runIn =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -21803,7 +22628,7 @@ runIn =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -21826,7 +22651,7 @@ runIn =
     
     , { browser = BlackberryBrowser
       , note = Nothing
-      , support = NotSupported
+      , support = Supported
       , version = VersionNumber 7
       }
     
@@ -21958,7 +22783,7 @@ styleScoped =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -21977,8 +22802,8 @@ styleScoped =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = Supported
-      , version = VersionNumber 11.4
+      , support = NotSupported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -22091,7 +22916,7 @@ svgCss =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -22109,7 +22934,7 @@ svgCss =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -22256,7 +23081,7 @@ textDecoration =
           Partial support refers to `text-decoration-skip` only supporting value `objects` and `ink`.
           """
       , support = PartiallySupported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -22277,10 +23102,10 @@ textDecoration =
     
     , { browser = UcBrowserForAndroid
       , note = Just """
-          All browsers support the CSS2 version of `text-decoration`, which matches only the `text-decoration-line` values (`underline`, etc.)
+          Partial support refers to `text-decoration-skip` only supporting value `objects` and `ink`.
           """
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = PartiallySupported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -22435,7 +23260,7 @@ textEmphasis =
           Partial support refers to incorrect support for `-webkit-text-emphasis-position`. These browsers support `over` and `under` as values, but not the added `left` and `right` values required by the spec.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -22459,7 +23284,7 @@ textEmphasis =
           Partial support refers to incorrect support for `-webkit-text-emphasis-position`. These browsers support `over` and `under` as values, but not the added `left` and `right` values required by the spec.
           """
       , support = PartiallySupportedWithPrefix
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -22600,7 +23425,7 @@ textOverflow =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -22618,7 +23443,7 @@ textOverflow =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -22733,7 +23558,7 @@ textSizeAdjust =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -22750,8 +23575,8 @@ textSizeAdjust =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -22886,7 +23711,7 @@ textStroke =
           Does not yet appear in any W3C specification. Was briefly included in a spec as the "text-outline" property, but this was removed.
           """
       , support = SupportedWithPrefix
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -22909,8 +23734,8 @@ textStroke =
       , note = Just """
           Does not yet appear in any W3C specification. Was briefly included in a spec as the "text-outline" property, but this was removed.
           """
-      , support = NotSupported
-      , version = VersionNumber 11.4
+      , support = SupportedWithPrefix
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -23075,7 +23900,7 @@ transforms2D =
           The scale transform can be emulated in IE < 9 using Microsoft's "zoom" extension, others are (not easily) possible using the MS Matrix filter
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -23098,8 +23923,8 @@ transforms2D =
       , note = Just """
           The scale transform can be emulated in IE < 9 using Microsoft's "zoom" extension, others are (not easily) possible using the MS Matrix filter
           """
-      , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -23304,7 +24129,7 @@ transforms3D =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -23321,8 +24146,8 @@ transforms3D =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = Supported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -23463,7 +24288,7 @@ ttf =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -23481,7 +24306,7 @@ ttf =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -23582,7 +24407,7 @@ userSelectNone =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -23599,8 +24424,8 @@ userSelectNone =
     
     , { browser = UcBrowserForAndroid
       , note = Nothing
-      , support = SupportedWithPrefix
-      , version = VersionNumber 11.4
+      , support = NotSupported
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -23714,56 +24539,46 @@ variableFonts : List BrowserSupport
 variableFonts =
     [ { browser = ChromeForAndroid
       , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
+          Does not support the `font-weight` and `font-stretch` properties, nor `format('truetype-variations')`
           """
-      , support = Supported
-      , version = VersionNumber 62
+      , support = PartiallySupported
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 57
       }
     
     , { browser = QqBrowser
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 1.2
       }
     
     , { browser = UcBrowserForAndroid
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
       , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
+          Does not support the `font-weight` and `font-stretch` properties, nor `format('truetype-variations')`
           """
-      , support = Supported
+      , support = PartiallySupported
       , version = VersionNumber 62
       }
     
     , { browser = BaiduBrowser
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 7.12
       }
     
     , { browser = BlackberryBrowser
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 7
       }
@@ -23778,75 +24593,59 @@ variableFonts =
     
     , { browser = Chrome
       , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
+          Does not support the `font-weight` and `font-stretch` properties, nor `format('truetype-variations')`
           """
-      , support = Supported
+      , support = PartiallySupported
       , version = VersionNumber 62
       }
     
     , { browser = Edge
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
-      , support = NotSupported
-      , version = VersionNumber 12
+      , note = Nothing
+      , support = Supported
+      , version = VersionNumber 17
       }
     
     , { browser = Firefox
-      , note = Just """
-          Requires MacOS 10.12+ and the following about:config flags to be enabled:
-      `layout.css.font-variations.enabled`,
-      `gfx.downloadable_fonts.keep_variation_tables`
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 53
       }
     
     , { browser = Ie
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 5.5
       }
     
     , { browser = IeMobile
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 10
       }
     
     , { browser = IosSafari
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = Supported
       , version = VersionRange 11.0 11.2
       }
     
     , { browser = OperaMini
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
       , version = AllVersions
       }
     
     , { browser = OperaMobile
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 10
       }
     
     , { browser = Opera
       , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
+          Does not support the `font-weight` and `font-stretch` properties, nor `format('truetype-variations')`
           """
-      , support = Supported
+      , support = PartiallySupported
       , version = VersionNumber 49
       }
     
@@ -23859,9 +24658,7 @@ variableFonts =
       }
     
     , { browser = SamsungInternet
-      , note = Just """
-          Variable fonts are still developing, but can be used with @supports in CSS to more safely put them in to use.
-          """
+      , note = Nothing
       , support = NotSupported
       , version = VersionNumber 4
       }
@@ -23876,7 +24673,7 @@ viewportUnits =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -23894,7 +24691,7 @@ viewportUnits =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -24041,7 +24838,7 @@ willChange =
     [ { browser = ChromeForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -24059,7 +24856,7 @@ willChange =
     , { browser = UcBrowserForAndroid
       , note = Nothing
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -24168,7 +24965,7 @@ wordBreak =
       Chrome, Safari and other WebKit/Blink browsers also support the unofficial `break-word` value which is treated like `word-wrap: break-word`.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -24198,7 +24995,7 @@ wordBreak =
       Chrome, Safari and other WebKit/Blink browsers also support the unofficial `break-word` value which is treated like `word-wrap: break-word`.
           """
       , support = PartiallySupported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser
@@ -24403,7 +25200,7 @@ wordwrap =
           Partial support refers to requiring the legacy name "word-wrap" (rather than "overflow-wrap") to work.
           """
       , support = Supported
-      , version = VersionNumber 62
+      , version = VersionNumber 64
       }
     
     , { browser = FirefoxForAndroid
@@ -24427,7 +25224,7 @@ wordwrap =
           Partial support refers to requiring the legacy name "word-wrap" (rather than "overflow-wrap") to work.
           """
       , support = Supported
-      , version = VersionNumber 11.4
+      , version = VersionNumber 11.8
       }
     
     , { browser = AndroidBrowser

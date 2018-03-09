@@ -400,6 +400,9 @@ support val =
     else if Text.isPrefixOf "a" val then
         "PartiallySupported"
 
+    else if Text.isPrefixOf "u d" val then
+        "PartiallySupported"
+
     else if Text.isPrefixOf "n" val then
         "NotSupported"
 
